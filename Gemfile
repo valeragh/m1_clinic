@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sass', '3.2.19'
 gem 'bower-rails'
 gem 'haml-rails'
+gem 'angular-rails-templates'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
