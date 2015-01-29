@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sass', '3.2.19'
 gem 'bower-rails'
 gem 'haml-rails'
+gem 'font-awesome-rails', '4.1.0.0'
 gem 'angular-rails-templates'
 
 group :test, :development do
@@ -31,6 +32,8 @@ group :test, :development do
   gem "capybara"
   gem "database_cleaner"
   gem "selenium-webdriver"
+  gem 'teaspoon'
+  gem 'phantomjs'
 end
 
 group :production do

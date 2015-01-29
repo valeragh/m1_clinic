@@ -1,0 +1,30 @@
+%header.site-header
+  %nav.navbar.navbar-default(role="navigation")
+    <!-- Brand and toggle get grouped for better mobile display -->
+    .navbar-header
+      %a.visible-xs(href="/")
+        = image_tag("logo/m1_clinic.svg", class: "mobile-logo", alt: "M1 Клиника")
+      %button.navbar-toggle(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+        %span.sr-only
+          Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    .navbar-collapse.collapse(id="bs-example-navbar-collapse-1" style="height: 1px;")
+      %ul.nav.navbar-nav(id="navbar-nav" style="box-shadow: rgba(6,57,106,0) 0px 1px 5px 0px;")
+        %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+          = link_to "О клинике"
+        %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+          = link_to "Услуги"
+        %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+          = link_to "Цены"
+        %li.nav-logo.hidden-xs(style="margin-top: 20.8888888888889px; margin-bottom: 0px")
+          %a(href="/")
+            - image_tag(class: "img-responsive leodis-nav-logo hidden-sm", alt: "1М Клиника", style: "width: 100%")
+        %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+          = link_to "Новости"
+        %li.doctor(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+          = link_to "Доктор Online"
+        %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+          = link_to "Контакты"

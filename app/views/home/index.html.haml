@@ -1,3 +1,256 @@
-.container-fluid{"ng-app"=>"receta"}
-  .view-container
-    .view-frame.animate-view{"ng-view"=>true}
+.site-wrapper(id="site-wrapper")
+  .container-fluid(id="containing-wrapper")
+    .row
+    .row
+      .col-sm7.col-md-8
+        .forum-image
+          .img.forum
+      .col-sm-5.col-md-4
+        .forum-content
+          %header
+            %p.category
+              Ваша
+            %h3
+              Первая Мужская Клиника
+            %p.event-location
+              Лечение простатита
+          %p.summary
+            Текст о клинике и ее ведущей роли в своей области, порядка 30 слов
+          = link_to "/" do
+            %i.fa.fa-long-arrow-right.fa-3x
+          .social-medis
+            %a.share.facebook(href="/")
+              %i.fa.fa-facebook
+            %a.share.twitter(href="/")
+              %i.fa.fa-google-plus
+      .col-sm-6.col-md-4(style="z-index: 2;")
+        .events-calendar
+          .twitter-feed(style="height: 400px;")
+            %p.category
+              Актуально
+            %h3
+              Новости
+            .tweet
+              .tweet-date
+                21.01.15
+              = link_to "/", {:target => "_blank", :title => "title"} do
+                Текст о новости, около 20 слов
+            .tweet
+              .tweet-date
+                21.01.15
+              = link_to "/", {:target => "_blank", :title => "title"} do
+                Текст о новости, около 20 слов
+            .tweet
+              .tweet-date
+                21.01.15
+              = link_to "/", {:target => "_blank", :title => "title"} do
+                Текст о новости, около 20 слов
+            .follow
+              %a(href="/")
+                %i.fa.fa-long-arrow-right.fa-3x
+                %span.follow-text
+                  ПОДПИСЫВАЙТЕСЬ
+      .col-sm-6.col-md-4(style="z-index: 1;")
+        .calendar-content
+          %header
+            %p.calendardatetime
+              УЗНАЙТЕ БОЛЬШЕ
+          .calendar-content-copy
+            %h3.calendartitle
+              МЫ РАБОТАЕМ ДЛЯ ВАС, БУДЬТЕ В КУРСЕ ПЕРЕДОВЫХ МЕТОДОВ ЛЕЧЕНИЯ
+            %p.calendardate.event-date
+            %p.calendarlocation.location
+            %p.calendarsummary.summary
+              Мы всегда на связи, подписывайтесь на наши новости, через социальные сети
+            .social-media
+              %a(href="/" class="share.facebook.calendar-facebook" target="_blank")
+                %i.fa.fa-facebook
+              %a(href="/" class="share.twitter.calendar-twitter" target="_blank")
+                %i.fa.fa-google-plus
+      .hidden-sm.col-md-4
+        .profile
+          .profile-content
+            = link_to "/" do
+              .img
+            .profile-content-copy
+              %p.category
+                истории
+              = link_to "/" do
+                %h3.profile-name
+                  Иван Калугин
+              %p.profile-summary
+                Текст о чудесном выздоровление клиента, около 20 слов
+              = link_to "/" do
+                %i.fa.fa-long-arrow-right.fa-3x
+      .col-sm-4
+        .place-content
+          .place-content-copy
+            %p.category
+              Ваш
+            %h3
+              Доктор Онлайн
+            %p.location
+              Проконсультируйтесь у врача
+            %p.summary
+              Текст о возможности онлайн консультации на сайте, около 30 слов
+            = link_to "/" do
+              %i.fa.fa-long-arrow-right.fa-3x
+            .social-medis
+            %a.share.facebook(href="/")
+              %i.fa.fa-facebook
+            %a.share.twitter(href="/")
+              %i.fa.fa-google-plus
+      .col-sm-8
+        .place-image
+          .img
+      .col-sm-4
+        .profile-content.doctor
+          = link_to "/" do
+            .img
+          .profile-content-copy
+            %p.category
+              наши специалисты
+            = link_to "/" do
+              %h3.profile-name
+                Доктора
+            %p.profile-summary
+              Текст о высокой квалификации и профиссионализме врачей клиники, около 30 слов
+            = link_to "/" do
+              %i.fa.fa-long-arrow-right.fa-3x
+      .col-sm-4
+        .profile-content.admin
+          = link_to "/" do
+            .img
+          .profile-content-copy
+            %p.category
+              наши специалисты
+            = link_to "/" do
+              %h3.profile-name
+                Менеджмент
+            %p.profile-summary
+              Текст о высокой квалификации и профиссионализме менеджмента клиники, около 30 слов
+            = link_to "/" do
+              %i.fa.fa-long-arrow-right.fa-3x
+      .col-sm-4
+        .profile-content.lab
+          = link_to "/" do
+            .img
+          .profile-content-copy
+            %p.category
+              наши специалисты
+            = link_to "/" do
+              %h3.profile-name
+                Лаборатория
+            %p.profile-summary
+              Текст о высокой квалификации и профиссионализме врачей лаборатории клиники, около 30 слов
+            = link_to "/" do
+              %i.fa.fa-long-arrow-right.fa-3x
+      .col-sm-4
+        .profile-content.partner1
+          = link_to "/" do
+            .img
+          .profile-content-copy
+            %p.category
+              наши партнеры
+            = link_to "/" do
+              %h3.profile-name
+                Партнер №1
+            %p.profile-summary
+              Текст о партнере №1 клиники и его лидирующих позициях, около 30 слов
+      .col-sm-4
+        .profile-content.partner2
+          = link_to "/" do
+            .img
+          .profile-content-copy
+            %p.category
+              наши партнеры
+            = link_to "/" do
+              %h3.profile-name
+                Партнер №2
+            %p.profile-summary
+              Текст о партнере №2 клиники и его лидирующих позициях, около 30 слов
+      .col-sm-4
+        .profile-content.partner3
+          = link_to "/" do
+            .img
+          .profile-content-copy
+            %p.category
+              Наши партнеры
+            = link_to "/" do
+              %h3.profile-name
+                Партнер №3
+            %p.profile-summary
+              Текст о партнере №3 клиники и его лидирующих позициях, около 30 слов
+      .col-sm-12
+        .instagram-images
+          .row
+            .instagram-photo.intro.col-xs-6.col-sm-3.col-md-2.col-lg-2
+              = link_to "/" do
+                = image_tag("logo.svg", class: "no-retina img-responsive", alt: "Логотип 1M Клиника")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2
+              = image_tag("footer/image1.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2
+              = image_tag("footer/image2.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2
+              = image_tag("footer/image3.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2
+              = image_tag("footer/image4.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2
+              = image_tag("footer/image5.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-xs
+              = image_tag("footer/image6.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-xs
+              = image_tag("footer/image7.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-xs.hidden-sm
+              = image_tag("footer/image8.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-xs.hidden-sm
+              = image_tag("footer/image9.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-xs.hidden-sm
+              = image_tag("footer/image10.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-xs.hidden-sm
+              = image_tag("footer/image11.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+            .instagram-photo.col-xs-6.col-sm-3.col-md-2.col-lg-2.hidden-md.hidden-xs.hidden-sm.hidden-lg
+              = image_tag("footer/image12.jpg", class: "no-retina img-responsive", alt: "Фотографии 1M Клиники")
+    .row
+      %footer.site-footer
+        .col-sm-2.col-sm-offset-1
+          = link_to "/" do
+            = image_tag("logo-light.png", class: "footer-logo.img-responsive", alt: "Logo 1M Clinic")
+        .col-sm-5
+          %ul.footer-links
+            %li
+              = link_to "О Клинике", "/"
+            %li
+              = link_to "Услуги", "/"
+            %li
+              = link_to "Цены", "/"
+            %li
+              = link_to "Новости", "/"
+            %li
+              = link_to "Доктор Онлайн", "/"
+            %li
+              = link_to "Контакты", "/"
+        .col-sm-4
+          %p
+            &copy 1М Клиника 2015
+          .site-social-media
+            %a.share.facebook(href="/")
+              %i.fa.fa-facebook
+            %a.share.twitter(href="/")
+              %i.fa.fa-google-plus
+          %p
+            Site by
+            %a.p53(href="/")
+              LWD
+
+
+
+
+
+
+
+
+
+
+
+
