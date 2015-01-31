@@ -5,6 +5,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'home#index'
+   match '/about', to: 'static_pages#about', via: 'get'
+   match '/contact', to: 'static_pages#contact', via: 'get'
+   match '/price', to: 'static_pages#price', via: 'get'
+   match '/servis', to: 'static_pages#servis', via: 'get'
+   match '/news', to: 'static_pages#news', via: 'get'
+   match '/certificate', to: 'static_pages#certificate', via: 'get'
    resources :recipes, only: [:index]
 
   # Example of regular route:

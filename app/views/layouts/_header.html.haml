@@ -14,17 +14,17 @@
     .navbar-collapse.collapse(id="bs-example-navbar-collapse-1" style="height: 1px;")
       %ul.nav.navbar-nav(id="navbar-nav" style="box-shadow: rgba(6,57,106,0) 0px 1px 5px 0px;")
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "О клинике"
+          = link_to "О клинике", about_path
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "Услуги"
+          = link_to "Услуги", servis_path
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "Цены"
+          = link_to "Цены", price_path
         %li.nav-logo.hidden-xs(style="margin-top: 20.8888888888889px; margin-bottom: 0px")
           %a(href="/")
             - image_tag(class: "img-responsive leodis-nav-logo hidden-sm", alt: "1М Клиника", style: "width: 100%")
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "Новости"
+          = link_to "Новости", news_path
         %li.doctor(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "Доктор Online"
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "Контакты"
+          = link_to "Контакты", contact_path
