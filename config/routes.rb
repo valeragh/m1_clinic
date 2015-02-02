@@ -11,6 +11,11 @@ Rails.application.routes.draw do
    match '/servis', to: 'static_pages#servis', via: 'get'
    match '/news', to: 'static_pages#news', via: 'get'
    match '/certificate', to: 'static_pages#certificate', via: 'get'
+   match '/doctors', to: 'static_pages#doctors', via: 'get'
+   match '/laboratory', to: 'static_pages#laboratory', via: 'get'
+   match '/administration', to: 'static_pages#administration', via: 'get'
+   match '/history', to: 'static_pages#history', via: 'get'
+   match '/partners', to: 'static_pages#partners', via: 'get'
    resources :recipes, only: [:index]
 
   # Example of regular route:

@@ -1,20 +1,20 @@
 .forum-image .img {
-  background-image: url(asset-path('administration.jpg'));
+  background-image: url(asset-path('reception.jpg'));
 }
 .profile-content .img {
-  background-image: url(asset-path('client1.jpg'));
+  background-image: url(asset-path('student.jpg'));
 }
 .place-image .img {
-  background-image: url(asset-path('doctor_online.jpg'));
+  background-image: url(asset-path('doctor3.jpg'));
 }
 .profile-content.doctor .img {
-  background-image: url(asset-path('doctor_online.jpg'));
+  background-image: url(asset-path('doctor1.jpg'));
 }
 .profile-content.admin .img {
-  background-image: url(asset-path('admin.jpg'));
+  background-image: url(asset-path('administration1.jpg'));
 }
 .profile-content.lab .img {
-  background-image: url(asset-path('laboratory.jpg'));
+  background-image: url(asset-path('laboratory3.jpg'));
 }
 .profile-content.partner3 .img {
   background-image: url(asset-path('sinevo.jpg'));
@@ -36,4 +36,68 @@
 }
 .map-image .img {
   background-image: url(asset-path('map.png'));
+}
+.icp-hero-one {
+  background-image: url(asset-path('family.jpg'));
+  height: 50rem;
+}
+.icp-hero-two {
+  background-image: url(asset-path('businessman.jpg'));
+  height: 50rem;
+}
+.icp-hero-three {
+  background-image: url(asset-path('student.jpg'));
+  height: 25rem;
+}
+.icp-hero-four {
+  background-image: url(asset-path('blank_history.jpg'));
+  height: 25rem;
+}
+.icp-hero-one.admin {
+  background-image: url(asset-path('administration.jpg'));
+  height: 50rem;
+}
+.icp-hero-two.admin {
+  background-image: url(asset-path('administration1.jpg'));
+  height: 50rem;
+}
+.icp-hero-three.admin {
+  background-image: url(asset-path('administration2.jpg'));
+  height: 25rem;
+}
+.icp-hero-four.admin {
+  background-image: url(asset-path('blank_administration.jpg'));
+  height: 25rem;
+}
+.icp-hero-one.doctor {
+  background-image: url(asset-path('doctor.jpg'));
+  height: 50rem;
+}
+.icp-hero-two.doctor {
+  background-image: url(asset-path('doctor1.jpg'));
+  height: 50rem;
+}
+.icp-hero-three.doctor {
+  background-image: url(asset-path('doctor2.jpg'));
+  height: 25rem;
+}
+.icp-hero-four.doctor {
+  background-image: url(asset-path('blank_doctor.jpg'));
+  height: 25rem;
+}
+.icp-hero-one.laboratory {
+  background-image: url(asset-path('laboratory.jpg'));
+  height: 50rem;
+}
+.icp-hero-two.laboratory {
+  background-image: url(asset-path('laboratory1.jpg'));
+  height: 50rem;
+}
+.icp-hero-three.laboratory {
+  background-image: url(asset-path('laboratory2.jpg'));
+  height: 25rem;
+}
+.icp-hero-four.laboratory {
+  background-image: url(asset-path('blank_laboratory.jpg'));
+  height: 25rem;
 }

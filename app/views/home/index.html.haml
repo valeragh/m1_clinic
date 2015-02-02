@@ -16,7 +16,7 @@
               Лечение простатита
           %p.summary
             Текст о клинике и ее ведущей роли в своей области, порядка 30 слов
-          = link_to "/" do
+          = link_to about_path do
             %i.fa.fa-long-arrow-right.fa-3x
           .social-medis
             %a.share.facebook(href="/")
@@ -33,17 +33,17 @@
             .tweet
               .tweet-date
                 21.01.15
-              = link_to "/", {:target => "_blank", :title => "title"} do
+              = link_to news_path, {:target => "_blank", :title => "title"} do
                 Текст о новости, около 20 слов
             .tweet
               .tweet-date
                 21.01.15
-              = link_to "/", {:target => "_blank", :title => "title"} do
+              = link_to news_path, {:target => "_blank", :title => "title"} do
                 Текст о новости, около 20 слов
             .tweet
               .tweet-date
                 21.01.15
-              = link_to "/", {:target => "_blank", :title => "title"} do
+              = link_to news_path, {:target => "_blank", :title => "title"} do
                 Текст о новости, около 20 слов
             .follow
               %a(href="/")
@@ -70,17 +70,17 @@
       .hidden-sm.col-md-4
         .profile
           .profile-content
-            = link_to "/" do
+            = link_to history_path do
               .img
             .profile-content-copy
               %p.category
                 истории
-              = link_to "/" do
+              = link_to history_path do
                 %h3.profile-name
                   Иван Калугин
               %p.profile-summary
                 Текст о чудесном выздоровление клиента, около 20 слов
-              = link_to "/" do
+              = link_to history_path do
                 %i.fa.fa-long-arrow-right.fa-3x
       .col-sm-4
         .place-content
@@ -105,78 +105,78 @@
           .img
       .col-sm-4
         .profile-content.doctor
-          = link_to "/" do
+          = link_to doctors_path do
             .img
           .profile-content-copy
             %p.category
               наши специалисты
-            = link_to "/" do
+            = link_to doctors_path do
               %h3.profile-name
                 Доктора
             %p.profile-summary
               Текст о высокой квалификации и профиссионализме врачей клиники, около 30 слов
-            = link_to "/" do
+            = link_to doctors_path do
               %i.fa.fa-long-arrow-right.fa-3x
       .col-sm-4
         .profile-content.admin
-          = link_to "/" do
+          = link_to administration_path do
             .img
           .profile-content-copy
             %p.category
               наши специалисты
-            = link_to "/" do
+            = link_to administration_path do
               %h3.profile-name
                 Менеджмент
             %p.profile-summary
               Текст о высокой квалификации и профиссионализме менеджмента клиники, около 30 слов
-            = link_to "/" do
+            = link_to administration_path do
               %i.fa.fa-long-arrow-right.fa-3x
       .col-sm-4
         .profile-content.lab
-          = link_to "/" do
+          = link_to laboratory_path do
             .img
           .profile-content-copy
             %p.category
               наши специалисты
-            = link_to "/" do
+            = link_to laboratory_path do
               %h3.profile-name
                 Лаборатория
             %p.profile-summary
               Текст о высокой квалификации и профиссионализме врачей лаборатории клиники, около 30 слов
-            = link_to "/" do
+            = link_to laboratory_path do
               %i.fa.fa-long-arrow-right.fa-3x
       .col-sm-4
         .profile-content.partner1
-          = link_to "/" do
+          = link_to partners_path do
             .img
           .profile-content-copy
             %p.category
               наши партнеры
-            = link_to "/" do
+            = link_to partners_path do
               %h3.profile-name
                 Партнер №1
             %p.profile-summary
               Текст о партнере №1 клиники и его лидирующих позициях, около 30 слов
       .col-sm-4
         .profile-content.partner2
-          = link_to "/" do
+          = link_to partners_path do
             .img
           .profile-content-copy
             %p.category
               наши партнеры
-            = link_to "/" do
+            = link_to partners_path do
               %h3.profile-name
                 Партнер №2
             %p.profile-summary
               Текст о партнере №2 клиники и его лидирующих позициях, около 30 слов
       .col-sm-4
         .profile-content.partner3
-          = link_to "/" do
+          = link_to partners_path do
             .img
           .profile-content-copy
             %p.category
               Наши партнеры
-            = link_to "/" do
+            = link_to partners_path do
               %h3.profile-name
                 Партнер №3
             %p.profile-summary

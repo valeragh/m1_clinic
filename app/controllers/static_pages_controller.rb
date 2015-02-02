@@ -16,4 +16,19 @@ class StaticPagesController < ApplicationController
 
   def certificate
   end
+
+  def doctors
+  end
+
+  def laboratory
+  end
+
+  def history
+  end
+
+  def administration
+  end
+
+  def partners
+  end
 end
