@@ -1,2 +1,34 @@
-%h1 StaticPages#contact
-%p Find me in app/views/static_pages/contact.html.haml
+.site-wrapper(id="site-wrapper")
+  .container-fluid(id="containing-wrapper")
+    .row
+    .row
+      .col-sm-7.col-md-8
+        .map-image
+          .img
+      .col-sm-5.col-md-4
+        .forum-content
+          %header
+            %h3
+              Как нас найти
+          %p.summary
+            Текст о возможных вариантах проезда к клинике, около 150 слов
+      .col-sm-4.ab
+        .about-content
+          %h3
+            Адрес
+          %p
+            г. Мариуполь, ул. Металлургов, дом 48б
+      .col-sm-4.ab
+        .about-content.middle
+          %h3
+            Телефон
+          %p
+            +38-050-777-77-77
+            %br
+            +38-062-777-77-77
+      .col-sm-4.ab
+        .about-content
+          %h3
+            Вопросы? Комментарии
+          %p
+            =link_to "1m_clinic@mail.com", "/"

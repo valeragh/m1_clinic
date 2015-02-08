@@ -11658,10 +11658,10 @@ function flipLogoBack() {
 }
 function toggleLogoSrc() {
   var src = $logo.attr('src');
-  if (src === "/assets/img/owl.svg") {
-    $logo.attr('src',"http://i-up.co.uk/i/doc/37827a85-e9ce-4b4f-8f86-bdc721f82bab/Leodis_logo.svg");
+  if (src === "assets/1M_clinic_logo_light.png") {
+    $logo.attr('src',"assets/1M_clinic_logo.png");
   } else {
-    $logo.attr('src',"/assets/img/owl.svg");
+    $logo.attr('src',"assets/1M_clinic_logo_light.png");
   }
 }
 

@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     .navbar-header
       %a.visible-xs(href="/")
-        = image_tag("logo/m1_clinic.svg", class: "mobile-logo", alt: "M1 Клиника")
+        = image_tag("1M_clinic_logo.png", class: "mobile-logo", alt: "M1 Клиника")
       %button.navbar-toggle(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
         %span.sr-only
           Toggle navigation
@@ -21,7 +21,7 @@
           = link_to "Цены", price_path
         %li.nav-logo.hidden-xs(style="margin-top: 20.8888888888889px; margin-bottom: 0px")
           %a(href="/")
-            - image_tag(class: "img-responsive leodis-nav-logo hidden-sm", alt: "1М Клиника", style: "width: 100%")
+            = image_tag("1M_clinic_logo.png",class: "img-responsive leodis-nav-logo hidden-sm", alt: "1М Клиника", style: "width: 100%")
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "Новости", news_path
         %li.doctor(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
