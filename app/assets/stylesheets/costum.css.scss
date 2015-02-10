@@ -16,13 +16,13 @@
 .profile-content.lab .img {
   background-image: url(asset-path('laboratory3.jpg'));
 }
-.profile-content.partner3 .img {
+.profile-content-partners.partner3 .img {
   background-image: url(asset-path('logo_partners1.jpg'));
 }
-.profile-content.partner2 .img {
+.profile-content-partners.partner2 .img {
   background-image: url(asset-path('logo_partners2.jpg'));
 }
-.profile-content.partner1 .img {
+.profile-content-partners.partner1 .img {
   background-image: url(asset-path('logo_partners.jpg'));
 }
 .lager-image .img {
@@ -103,4 +103,30 @@
 }
 .map-image .img {
   background-image: url(asset-path('map.png'));
+}
+.profile-content-partners {
+  height: 30rem;
+  background: #fff;
+  text-align: center;
+}
+.profile-content-partners .img{
+  background-size: cover;
+  background-position: center center;
+  height: 20rem;
+}
+.col-sm-12.title{
+  background: #d3d3c9;
+  text-align: center;
+  color: #fff
+}
+@media (min-width: 992px){
+  .site-wrapper{
+    margin-top: 84px;
+  }
+  .profile-content-partners {
+    height: 30rem;
+  }
+  .profile-content-partners .img{
+    height: 28rem;
+  }
 }
