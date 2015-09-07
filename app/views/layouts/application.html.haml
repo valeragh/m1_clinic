@@ -24,11 +24,13 @@
     #iscrolldiv
       #scroll-content
         = render "layouts/header"
+        .site-wrapper(id="site-wrapper")
+          .container-fluid(id="containing-wrapper")
+            .row
+            = yield
 
-        = yield
+            = render "layouts/footer"
 
-        = render "layouts/footer"
-
-        = javascript_include_tag "bottom-min.js.erb", extname: false
+          = javascript_include_tag "bottom-min.js.erb", extname: false
 
 

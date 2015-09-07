@@ -1,46 +1,45 @@
-.site-wrapper(id="site-wrapper")
-  .container-fluid(id="containing-wrapper")
-    .row
-    .row
-      .col-sm-7.col-md-8
-        .lager-image
+.row
+  .col-sm-7.col-md-8
+    .lager-image
+      .img
+  .col-sm-5.col-md-4
+    .leodis-content
+      %header
+        %h1
+          Первая Мужская Клиника
+      %p.summary
+        Полный текст о уникальности клинике, порядка 250 слов
+  .col-sm-4
+    .owl-img.img
+  .col-sm-4
+    .owl-content
+      %h3
+        Оборудование
+      %p.own-summary
+        Текст о оборудование и его уникальности, порядка 250 слов
+  .col-sm-4
+    .profile
+      .profile-content.certificate
+        = link_to certificate_path do
           .img
-      .col-sm-5.col-md-4
-        .leodis-content
-          %header
-            %h1
-              Первая Мужская Клиника
-          %p.summary
-            Полный текст о уникальности клинике, порядка 250 слов
-      .col-sm-4
-        .owl-img.img
-      .col-sm-4
-        .owl-content
-          %h3
-            Оборудование
-          %p.own-summary
-            Текст о оборудование и его уникальности, порядка 250 слов
-      .col-sm-4
-        .profile
-          .profile-content.certificate
-            = link_to certificate_path do
-              .img
-            .profile-content-copy
-              %p.category
-                Наши Сертификаты
-              = link_to "Система контроля ISO-2021", certificate_path
-              %p.profile-summary
-                Текст о сертификатах, около 20 слов
-              = link_to certificate_path do
-                %i.fa.fa-long-arrow-right.fa-3x
-      .col-sm-5.col-md-4
-        .find-leodis
-          %header
-            %h3
-              Как нас найти
-            %p.summary
-              Текст о возможных вариантах проезда к клинике, около 150 слов
-      .col-sm-7.col-md-8
-        .map-image
-          .img
+        .profile-content-copy
+          %p.category
+            Наши Сертификаты
+          = link_to "Система контроля ISO-2021", certificate_path
+          %p.profile-summary
+            Текст о сертификатах, около 20 слов
+          = link_to certificate_path do
+            %i.fa.fa-long-arrow-right.fa-3x
+  .col-sm-5.col-md-4
+    .find-leodis
+      %header
+        %h3
+          Как нас найти
+        %p.summary
+          Текст о возможных вариантах проезда к клинике, около 150 слов
+  .col-sm-7.col-md-8
+    .map-image
+      .img
+
+  = render "layouts/instagram"
 

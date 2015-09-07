@@ -16,7 +16,7 @@ Rails.application.routes.draw do
    match '/administration', to: 'static_pages#administration', via: 'get'
    match '/history', to: 'static_pages#history', via: 'get'
    match '/partners', to: 'static_pages#partners', via: 'get'
-   resources :recipes, only: [:index]
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -66,7 +66,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  unless Rails.application.config.consider_all_requests_local
-    get '*not_found', to: 'errors#error_404'
-  end
 end

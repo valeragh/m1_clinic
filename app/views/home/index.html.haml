@@ -1,168 +1,166 @@
-.site-wrapper(id="site-wrapper")
-  .container-fluid(id="containing-wrapper")
-    .row
-    .row
-      .col-sm7.col-md-8
-        .forum-image
-          .img.forum
-      .col-sm-5.col-md-4
-        .forum-content
-          %header
-            %p.category
-              Ваша
-            %h3
-              Первая Мужская // Клиника
-            %p.event-location
-              Лечение простатита
-          %p.summary
-            Текст о клинике и ее ведущей роли в своей области, порядка 30 слов
-          = link_to about_path do
+.row
+  .col-sm7.col-md-8
+    .forum-image
+      .img.forum
+  .col-sm-5.col-md-4
+    .forum-content
+      %header
+        %p.category
+          Ваша
+        %h3
+          Первая Мужская // Клиника
+        %p.event-location
+          Лечение простатита
+      %p.summary
+        Текст о клинике и ее ведущей роли в своей области, порядка 30 слов
+      = link_to about_path do
+        %i.fa.fa-long-arrow-right.fa-3x
+      .social-medis
+        %a.share.facebook(href="/")
+          %i.fa.fa-facebook
+        %a.share.twitter(href="/")
+          %i.fa.fa-google-plus
+  .col-sm-6.col-md-4(style="z-index: 2;")
+    .events-calendar
+      .twitter-feed(style="height: 400px;")
+        %p.category
+          Актуально
+        %h3
+          Новости
+        .tweet
+          .tweet-date
+            21.01.15
+          = link_to news_path, {:target => "_blank", :title => "title"} do
+            Текст о новости, около 20 слов
+        .tweet
+          .tweet-date
+            21.01.15
+          = link_to news_path, {:target => "_blank", :title => "title"} do
+            Текст о новости, около 20 слов
+        .tweet
+          .tweet-date
+            21.01.15
+          = link_to news_path, {:target => "_blank", :title => "title"} do
+            Текст о новости, около 20 слов
+        .follow
+          %a(href="/")
             %i.fa.fa-long-arrow-right.fa-3x
-          .social-medis
-            %a.share.facebook(href="/")
-              %i.fa.fa-facebook
-            %a.share.twitter(href="/")
-              %i.fa.fa-google-plus
-      .col-sm-6.col-md-4(style="z-index: 2;")
-        .events-calendar
-          .twitter-feed(style="height: 400px;")
-            %p.category
-              Актуально
-            %h3
-              Новости
-            .tweet
-              .tweet-date
-                21.01.15
-              = link_to news_path, {:target => "_blank", :title => "title"} do
-                Текст о новости, около 20 слов
-            .tweet
-              .tweet-date
-                21.01.15
-              = link_to news_path, {:target => "_blank", :title => "title"} do
-                Текст о новости, около 20 слов
-            .tweet
-              .tweet-date
-                21.01.15
-              = link_to news_path, {:target => "_blank", :title => "title"} do
-                Текст о новости, около 20 слов
-            .follow
-              %a(href="/")
-                %i.fa.fa-long-arrow-right.fa-3x
-                %span.follow-text
-                  ПОДПИСЫВАЙТЕСЬ
-      .col-sm-6.col-md-4(style="z-index: 1;")
-        .calendar-content
-          %header
-            %p.calendardatetime
-              УЗНАЙТЕ БОЛЬШЕ
-          .calendar-content-copy
-            %h3.calendartitle
-              МЫ РАБОТАЕМ ДЛЯ ВАС, БУДЬТЕ В КУРСЕ ПЕРЕДОВЫХ МЕТОДОВ ЛЕЧЕНИЯ
-            %p.calendardate.event-date
-            %p.calendarlocation.location
-            %p.calendarsummary.summary
-              Мы всегда на связи, подписывайтесь на наши новости, через социальные сети
-            .social-media
-              %a(href="/" class="share.facebook.calendar-facebook" target="_blank")
-                %i.fa.fa-facebook
-              %a(href="/" class="share.twitter.calendar-twitter" target="_blank")
-                %i.fa.fa-google-plus
-      .hidden-sm.col-md-4
-        .profile
-          .profile-content
-            = link_to history_path do
-              .img
-            .profile-content-copy
-              %p.category
-                истории
-              = link_to history_path do
-                %h3.profile-name
-                  Иван Калугин
-              %p.profile-summary
-                Текст о чудесном выздоровление клиента, около 20 слов
-              = link_to history_path do
-                %i.fa.fa-long-arrow-right.fa-3x
-      .col-sm-4
-        .place-content
-          .place-content-copy
-            %p.category
-              Ваш
-            %h3
-              Доктор Онлайн
-            %p.location
-              Проконсультируйтесь у врача
-            %p.summary
-              Текст о возможности онлайн консультации на сайте, около 30 слов
-            = link_to "/" do
-              %i.fa.fa-long-arrow-right.fa-3x
-            .social-medis
-            %a.share.facebook(href="/")
-              %i.fa.fa-facebook
-            %a.share.twitter(href="/")
-              %i.fa.fa-google-plus
-      .col-sm-8
-        .place-image
+            %span.follow-text
+              ПОДПИСЫВАЙТЕСЬ
+  .col-sm-6.col-md-4(style="z-index: 1;")
+    .calendar-content
+      %header
+        %p.calendardatetime
+          УЗНАЙТЕ БОЛЬШЕ
+      .calendar-content-copy
+        %h3.calendartitle
+          МЫ РАБОТАЕМ ДЛЯ ВАС, БУДЬТЕ В КУРСЕ ПЕРЕДОВЫХ МЕТОДОВ ЛЕЧЕНИЯ
+        %p.calendardate.event-date
+        %p.calendarlocation.location
+        %p.calendarsummary.summary
+          Мы всегда на связи, подписывайтесь на наши новости, через социальные сети
+        .social-media
+          %a(href="/" class="share.facebook.calendar-facebook" target="_blank")
+            %i.fa.fa-facebook
+          %a(href="/" class="share.twitter.calendar-twitter" target="_blank")
+            %i.fa.fa-google-plus
+  .hidden-sm.col-md-4
+    .profile
+      .profile-content
+        = link_to history_path do
           .img
-      .col-sm-4
-        .profile-content.doctor
-          = link_to doctors_path do
-            .img
-          .profile-content-copy
-            %p.category
-              наши специалисты
-            = link_to doctors_path do
-              %h3.profile-name
-                Доктора
-            %p.profile-summary
-              Текст о высокой квалификации и профиссионализме врачей клиники, около 30 слов
-            = link_to doctors_path do
-              %i.fa.fa-long-arrow-right.fa-3x
-      .col-sm-4
-        .profile-content.admin
-          = link_to administration_path do
-            .img
-          .profile-content-copy
-            %p.category
-              наши специалисты
-            = link_to administration_path do
-              %h3.profile-name
-                Менеджмент
-            %p.profile-summary
-              Текст о высокой квалификации и профиссионализме менеджмента клиники, около 30 слов
-            = link_to administration_path do
-              %i.fa.fa-long-arrow-right.fa-3x
-      .col-sm-4
-        .profile-content.lab
-          = link_to laboratory_path do
-            .img
-          .profile-content-copy
-            %p.category
-              наши специалисты
-            = link_to laboratory_path do
-              %h3.profile-name
-                Лаборатория
-            %p.profile-summary
-              Текст о высокой квалификации и профиссионализме врачей лаборатории клиники, около 30 слов
-            = link_to laboratory_path do
-              %i.fa.fa-long-arrow-right.fa-3x
-      .col-sm-12.title
-        %h1
-          Наши партнеры
-      .col-sm-4
-        .profile-content-partners.partner1
-          = link_to partners_path do
-            .img
+        .profile-content-copy
+          %p.category
+            истории
+          = link_to history_path do
+            %h3.profile-name
+              Иван Калугин
+          %p.profile-summary
+            Текст о чудесном выздоровление клиента, около 20 слов
+          = link_to history_path do
+            %i.fa.fa-long-arrow-right.fa-3x
+  .col-sm-4
+    .place-content
+      .place-content-copy
+        %p.category
+          Ваш
+        %h3
+          Доктор Онлайн
+        %p.location
+          Проконсультируйтесь у врача
+        %p.summary
+          Текст о возможности онлайн консультации на сайте, около 30 слов
+        = link_to "/" do
+          %i.fa.fa-long-arrow-right.fa-3x
+        .social-medis
+        %a.share.facebook(href="/")
+          %i.fa.fa-facebook
+        %a.share.twitter(href="/")
+          %i.fa.fa-google-plus
+  .col-sm-8
+    .place-image
+      .img
+  .col-sm-4
+    .profile-content.doctor
+      = link_to doctors_path do
+        .img
+      .profile-content-copy
+        %p.category
+          наши специалисты
+        = link_to doctors_path do
+          %h3.profile-name
+            Доктора
+        %p.profile-summary
+          Текст о высокой квалификации и профиссионализме врачей клиники, около 30 слов
+        = link_to doctors_path do
+          %i.fa.fa-long-arrow-right.fa-3x
+  .col-sm-4
+    .profile-content.admin
+      = link_to administration_path do
+        .img
+      .profile-content-copy
+        %p.category
+          наши специалисты
+        = link_to administration_path do
+          %h3.profile-name
+            Менеджмент
+        %p.profile-summary
+          Текст о высокой квалификации и профиссионализме менеджмента клиники, около 30 слов
+        = link_to administration_path do
+          %i.fa.fa-long-arrow-right.fa-3x
+  .col-sm-4
+    .profile-content.lab
+      = link_to laboratory_path do
+        .img
+      .profile-content-copy
+        %p.category
+          наши специалисты
+        = link_to laboratory_path do
+          %h3.profile-name
+            Лаборатория
+        %p.profile-summary
+          Текст о высокой квалификации и профиссионализме врачей лаборатории клиники, около 30 слов
+        = link_to laboratory_path do
+          %i.fa.fa-long-arrow-right.fa-3x
+  .col-sm-12.title
+    %h1
+      Наши партнеры
+  .col-sm-4
+    .profile-content-partners.partner1
+      = link_to partners_path do
+        .img
 
-      .col-sm-4
-        .profile-content-partners.partner2
-          = link_to partners_path do
-            .img
+  .col-sm-4
+    .profile-content-partners.partner2
+      = link_to partners_path do
+        .img
 
-      .col-sm-4
-        .profile-content-partners.partner3
-          = link_to partners_path do
-            .img
+  .col-sm-4
+    .profile-content-partners.partner3
+      = link_to partners_path do
+        .img
 
+  = render "layouts/instagram"
 
 
 
