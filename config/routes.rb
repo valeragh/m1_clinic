@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'procedures/index'
+
+  get 'procedures/show'
+
+  get 'procedures/show_procedur'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,6 +24,9 @@ Rails.application.routes.draw do
    match '/partners', to: 'static_pages#partners', via: 'get'
    match '/news', to: 'news#index', via: 'get'
    get '/news/:id', to: 'news#show', as: :show_news
+   match '/procedures', to: 'procedures#index', via: 'get'
+  get '/procedures/:service_category_id', to: 'procedures#show', as: :procedure_category
+  get '/procedures/:service_category_id/service/:id', to: 'procedures#show_procedur', as: :procedure
 
 
   # Example of regular route:
