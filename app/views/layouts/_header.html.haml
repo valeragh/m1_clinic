@@ -28,3 +28,20 @@
           = link_to "Доктор Online"
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "Контакты", contact_path
+        - if signed_in?
+          %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+            = link_to root_path do
+              %i.fa.fa-comments 
+          
+          %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+            = link_to destroy_user_session_path, :method => :delete do
+              %i.fa.fa-sign-out
+        - else
+          %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+            = link_to new_user_registration_path do
+              %i.fa.fa-user
+          
+          %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
+            = link_to new_user_session_path do 
+              %i.fa.fa-sign-in
+              
