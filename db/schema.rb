@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150909104918) do
+ActiveRecord::Schema.define(version: 20150909110847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clinics", force: true do |t|
+    t.string   "address"
+    t.text     "contacts"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "description"
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "clinics", ["slug"], name: "index_clinics_on_slug", unique: true, using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false

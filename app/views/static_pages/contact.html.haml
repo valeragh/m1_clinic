@@ -1,8 +1,11 @@
+%script{src: "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry", type: "text/javascript"}
+%script{src: "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", type: "text/javascript"}
 .row
   .col-sm-7.col-md-8
     .map-image
-      .img
-  .col-sm-5.col-md-4
+      %div(style='width: 100%;')
+        #map(style='width: 100%; height: 500px;')
+  .col-sm-5.col-md-4(style='height: 500px;')
     .forum-content
       %header
         %h3
@@ -31,3 +34,12 @@
         =link_to "1m_clinic@mail.com", "/"
 
   = render "layouts/instagram"
+
+- content_for :scripts do
+  :javascript
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(#{raw @hash.to_json});
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });

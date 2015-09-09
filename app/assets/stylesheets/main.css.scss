@@ -5669,12 +5669,13 @@ h3 {
 }
 @media (min-width: 992px) {
   .forum-content {
-    height: 44rem;
+    height: 40rem;
   }
 }
 @media (min-width: 1200px) {
   .forum-content {
     padding: 4rem;
+    padding-bottom: 0;
   }
 }
 .forum-content:after {
@@ -6752,22 +6753,22 @@ h3 {
   }
 }
 .calendar-content .calendar-content-copy {
-  padding: 2rem;
+  padding: 0;
   top: 15%;
-  padding-bottom: 0;
+  padding-bottom: 4rem;
 }
 .calendar-content .calendar-content-copy button {
   margin-bottom: 1rem;
 }
 @media (min-width: 992px) {
   .calendar-content .calendar-content-copy {
-    top: 26%;
+    top: 40%;
   }
 }
 @media (min-width: 1200px) {
   .calendar-content .calendar-content-copy {
-    padding: 4rem;
-    padding-bottom: 0;
+    padding: 0;
+    padding-bottom: 4rem;
   }
 }
 .modal {
