@@ -21,10 +21,32 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'sass', '3.2.19'
-gem 'bower-rails'
+gem 'friendly_id', '~> 5.0.0'
+gem 'twitter-bootstrap-rails'
+gem "less-rails"
 gem 'haml-rails'
 gem 'font-awesome-rails', '4.1.0.0'
-gem 'angular-rails-templates'
+gem 'rails-i18n', '~> 4.0.0'
+gem 'therubyracer', platforms: :ruby
+gem 'execjs'
+gem 'nokogiri'
+gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'devise'
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
+gem 'gmaps4rails'
+gem 'geocoder'
+gem 'metamagic'
+gem 'cancancan'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
+gem "rmagick"
+gem "carrierwave"
+gem 'private_pub'
+gem 'thin'
+gem 'pg_search'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
