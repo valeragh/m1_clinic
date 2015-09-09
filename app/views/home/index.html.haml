@@ -27,21 +27,13 @@
           Актуально
         %h3
           Новости
-        .tweet
-          .tweet-date
-            21.01.15
-          = link_to news_path, {:target => "_blank", :title => "title"} do
-            Текст о новости, около 20 слов
-        .tweet
-          .tweet-date
-            21.01.15
-          = link_to news_path, {:target => "_blank", :title => "title"} do
-            Текст о новости, около 20 слов
-        .tweet
-          .tweet-date
-            21.01.15
-          = link_to news_path, {:target => "_blank", :title => "title"} do
-            Текст о новости, около 20 слов
+        - @posts.each do |post|
+          .tweet
+            .tweet-date
+              = post.created_at
+            = link_to show_news(post[:slug]) do
+              = post.title
+        
         .follow
           %a(href="/")
             %i.fa.fa-long-arrow-right.fa-3x

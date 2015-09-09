@@ -16,6 +16,8 @@ Rails.application.routes.draw do
    match '/administration', to: 'static_pages#administration', via: 'get'
    match '/history', to: 'static_pages#history', via: 'get'
    match '/partners', to: 'static_pages#partners', via: 'get'
+   match '/news', to: 'news#index', via: 'get'
+   get '/news/:id', to: 'news#show', as: :show_news
 
 
   # Example of regular route:
