@@ -4,7 +4,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :conversations, :foreign_key => :sender_id
+  mount_uploader :image_url, ImageUploader
+
   def role?(r)
     role.include? r.to_s
   end
+
+  
 end

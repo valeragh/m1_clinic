@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require gmaps/google
+//= require private_pub
+//= require chat
 //= require_tree .
 

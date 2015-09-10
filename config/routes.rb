@@ -4,7 +4,10 @@ Rails.application.routes.draw do
              #controllers: { :omniauth_callbacks => 'users/omniauth_callbacks' },
              path: '',
              path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
-  
+
+  resources :conversations do
+    resources :messages
+  end
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,6 +15,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
    match '/about', to: 'static_pages#about', via: 'get'
+   match '/cabinet', to: 'users#index', via: 'get'
+   match '/cabinet_show', to: 'users#show', via: 'get'
    match '/contact', to: 'static_pages#contact', via: 'get'
    match '/price', to: 'static_pages#price', via: 'get'
    match '/servis', to: 'static_pages#servis', via: 'get'

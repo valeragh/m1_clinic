@@ -1,0 +1,32 @@
+.row
+  .col-sm-12
+    .getintouch-header
+      %h1
+        - if current_user.role == 'doctor'
+          Добрый день доктор
+        - else
+          Выбирете доктора
+  .col-sm-12
+
+    - if current_user.role == 'doctor'
+      = link_to "Перейти в кабинет", cabinet_show_path, class: "btn btn-primary"
+    - else
+      .col-sm-12
+      - @users.each do |user|
+        .col-sm-4
+          .place-content
+            .place-content-copy
+              %p.category
+                Ваш
+              %h3
+                Доктор Онлайн
+              %p.location
+                = user.name
+              %p.summary
+                = user.description
+              = link_to "#", class: "blue-button btn-xs start-conversation", "data-sid" => current_user.id, "data-rip" => user.id do
+                %i.fa.fa-long-arrow-right.fa-3x
+        .col-sm-8
+          .place-image
+            .img{:style => "background: url(#{image_path "#{user.image_url}"})"}
+

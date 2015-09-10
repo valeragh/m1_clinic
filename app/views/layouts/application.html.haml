@@ -19,14 +19,18 @@
 
   %body
 
-    %p= notice
-    %p= alert
     #iscrolldiv
       #scroll-content
         = render "layouts/header"
+        
         .site-wrapper(id="site-wrapper")
           .container-fluid(id="containing-wrapper")
+
             .row
+              %p(style="padding-left:5px;color:red;")
+                = notice
+              %p(style="padding-left:5px;color:red;")
+                = alert
             = yield
 
             = render "layouts/footer"

@@ -5,7 +5,7 @@ class Ability
     user ||= User.new # guest user
     if user.role == 'admin'
         can :manage, :all
-    else
+    elsif user.role == 'security'
         can :read, :all
     end
     # Define abilities for the passed in user here. For example:
