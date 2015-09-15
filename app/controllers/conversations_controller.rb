@@ -1,6 +1,22 @@
 class ConversationsController < ApplicationController
   before_filter :authenticate_user!
 
+  def index
+    if Conversation.between(params[:sender_id],params[:recipient_id]).present?
+      @conversation = Conversation.between(params[:sender_id],params[:recipient_id]).first
+    else
+      @conversation = Conversation.create!(conversation_params)
+    end
+
+    #render json: { conversation_id: @conversation.id }
+    #@conversation = Conversation.find(params[conversation_id: @conversation.id])
+    @reciever = interlocutor(@conversation)
+    @messages = @conversation.messages
+    @message = Message.new
+    @certificate = Certificate.new
+    @certificates = Certificate.all.where("conversation_id = '#{@conversation.id}'")
+  end
+
   def create
     if Conversation.between(params[:sender_id],params[:recipient_id]).present?
       @conversation = Conversation.between(params[:sender_id],params[:recipient_id]).first
@@ -16,6 +32,8 @@ class ConversationsController < ApplicationController
     @reciever = interlocutor(@conversation)
     @messages = @conversation.messages
     @message = Message.new
+    @certificate = Certificate.new
+    @certificates = Certificate.all.where("conversation_id = '#{@conversation.id}'")
   end
 
   private

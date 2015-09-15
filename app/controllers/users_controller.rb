@@ -48,4 +48,13 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name)
     end
+
+    def conversation_params
+      params.permit(:sender_id, :recipient_id)
+    end
+
+    def interlocutor(conversation)
+      current_user == conversation.recipient ? conversation.sender : conversation.recipient
+    end
+
 end

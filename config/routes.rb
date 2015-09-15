@@ -5,8 +5,10 @@ Rails.application.routes.draw do
              path: '',
              path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
 
+
   resources :conversations do
     resources :messages
+    resources :certificates
   end
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

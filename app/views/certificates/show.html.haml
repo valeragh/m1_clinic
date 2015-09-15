@@ -1,0 +1,5 @@
+.row
+  .col-sm-12
+    = image_tag "#{@certificate.image_url}", class: "img-responsive center-block"
+  .col-sm-12.text-center
+    = link_to "В кабинет", conversation_path(@conversation), class: "btn btn-primary certificate"

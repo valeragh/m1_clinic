@@ -1,8 +1,10 @@
+%script{src: "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry", type: "text/javascript"}
+%script{src: "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", type: "text/javascript"}
 .row
   .col-sm-7.col-md-8
     .lager-image
       .img
-  .col-sm-5.col-md-4
+  .col-sm-5.col-md-4(style='height: 50rem;')
     .leodis-content
       %header
         %h1
@@ -30,7 +32,7 @@
             Текст о сертификатах, около 20 слов
           = link_to certificate_path do
             %i.fa.fa-long-arrow-right.fa-3x
-  .col-sm-5.col-md-4
+  .col-sm-5.col-md-4(style='height: 50rem;')
     .find-leodis
       %header
         %h3
@@ -39,7 +41,17 @@
           Текст о возможных вариантах проезда к клинике, около 150 слов
   .col-sm-7.col-md-8
     .map-image
-      .img
+      %div(style='width: 100%;')
+        #map(style='width: 100%; height: 500px;')
 
   = render "layouts/instagram"
+
+- content_for :scripts do
+  :javascript
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(#{raw @hash.to_json});
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
 

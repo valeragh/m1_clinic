@@ -1,8 +1,8 @@
 .forum-image .img {
-  background-image: url(asset-path('1m_clinic_admin.jpg'));
+  background-image: url(asset-path('home_admin_1mclinic.jpg'));
 }
 .profile-content .img {
-  background-image: url(asset-path('student.jpg'));
+  background-image: url(asset-path('history_home.jpg'));
 }
 .place-image .img {
   background-image: url(asset-path('doctor3.jpg'));
@@ -11,10 +11,10 @@
   background-image: url(asset-path('doctor1.jpg'));
 }
 .profile-content.admin .img {
-  background-image: url(asset-path('administration_2_533X280.jpg'));
+  background-image: url(asset-path('home_administrator_1mclinic.jpg'));
 }
 .profile-content.lab .img {
-  background-image: url(asset-path('laboratory3.jpg'));
+  background-image: url(asset-path('home_laboratory_1mclinic.jpg'));
 }
 .profile-content-partners.partner3 .img {
   background-image: url(asset-path('logo_partners1.jpg'));
@@ -26,7 +26,7 @@
   background-image: url(asset-path('logo_partners.jpg'));
 }
 .lager-image .img {
-  background-image: url(asset-path('about_clinic.jpg'));
+  background-image: url(asset-path('about_us_1mclinic.jpg'));
 }
 .owl-img.img {
   background-image: url(asset-path('products.jpg'));
@@ -38,19 +38,19 @@
   background-image: url(asset-path('map.png'));
 }
 .icp-hero-one {
-  background-image: url(asset-path('family.jpg'));
+  background-image: url(asset-path('history_2.jpg'));
   height: 50rem;
 }
 .icp-hero-two {
-  background-image: url(asset-path('businessman.jpg'));
+  background-image: url(asset-path('history_3.jpg'));
   height: 50rem;
 }
 .icp-hero-three {
-  background-image: url(asset-path('student.jpg'));
+  background-image: url(asset-path('history.jpg'));
   height: 25rem;
 }
 .icp-hero-four {
-  background-image: url(asset-path('blank_history.jpg'));
+  background-image: url(asset-path('history_4.jpg'));
   height: 25rem;
 }
 .icp-hero-one.admin {
@@ -58,15 +58,31 @@
   height: 50rem;
 }
 .icp-hero-two.admin {
-  background-image: url(asset-path('administration3.jpg'));
+  background-image: url(asset-path('administration_5.jpg'));
   height: 50rem;
 }
 .icp-hero-three.admin {
-  background-image: url(asset-path('administration2.jpg'));
+  background-image: url(asset-path('administration_6.jpg'));
   height: 25rem;
 }
 .icp-hero-four.admin {
-  background-image: url(asset-path('blank_administration.jpg'));
+  background-image: url(asset-path('blank_administration_logo.jpg'));
+  height: 25rem;
+}
+.icp-hero-one.cabinet {
+  background-image: url(asset-path('question.jpg'));
+  height: 50rem;
+}
+.icp-hero-two.cabinet {
+  background-image: url(asset-path('chat.jpg'));
+  height: 50rem;
+}
+.icp-hero-three.cabinet {
+  background-image: url(asset-path('answer.jpg'));
+  height: 25rem;
+}
+.icp-hero-four.cabinet {
+  background-image: url(asset-path('blank_administration_logo.jpg'));
   height: 25rem;
 }
 .icp-hero-one.doctor {
@@ -74,7 +90,7 @@
   height: 50rem;
 }
 .icp-hero-two.doctor {
-  background-image: url(asset-path('doctor4.jpg'));
+  background-image: url(asset-path('doctor_4.jpg'));
   height: 50rem;
 }
 .icp-hero-three.doctor {
@@ -82,7 +98,7 @@
   height: 25rem;
 }
 .icp-hero-four.doctor {
-  background-image: url(asset-path('blank_doctor.jpg'));
+  background-image: url(asset-path('doctor_5.jpg'));
   height: 25rem;
 }
 .icp-hero-one.laboratory {
@@ -90,15 +106,15 @@
   height: 50rem;
 }
 .icp-hero-two.laboratory {
-  background-image: url(asset-path('laboratory1.jpg'));
+  background-image: url(asset-path('laboratory_2.jpg'));
   height: 50rem;
 }
 .icp-hero-three.laboratory {
-  background-image: url(asset-path('laboratory2.jpg'));
+  background-image: url(asset-path('laboratory_3.jpg'));
   height: 25rem;
 }
 .icp-hero-four.laboratory {
-  background-image: url(asset-path('blank_laboratory.jpg'));
+  background-image: url(asset-path('doctor_5.jpg'));
   height: 25rem;
 }
 .map-image .img {
@@ -132,4 +148,22 @@
 }
 li.login {
   width: 30px;
+}
+ul.cabinet{
+  padding-top: 15px;
+}
+li.image-cabinet{
+  padding-bottom: 5px;
+
+}
+a.red{
+  color: red;
+  padding-left: 80px;
+}
+a.certificate {
+  margin: 10px;
+}
+.col-sm-4.cabinet{
+  background-color: #00356c;
+  color: white;
 }
