@@ -85,6 +85,7 @@ set :scm,             :git
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
 set :repository,    "git@github.com:valeragh/m1_clinic.git"
+set :shared_children, shared_children + %w{public/uploads}
 
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 

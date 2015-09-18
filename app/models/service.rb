@@ -2,8 +2,9 @@ class Service < ActiveRecord::Base
   belongs_to :service_category
 
   mount_uploader :image_url, ImageUploader
+  mount_uploader :image_small_url, ImageUploader
 
-  validates :name, :image_url, :description, :service_category_id, presence: true
+  validates :name, :image_url, :description, :price, :service_category_id, presence: true
   validates :name, length: {
     minimum: 2,
     maximum: 50,

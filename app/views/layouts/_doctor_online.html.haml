@@ -1,0 +1,21 @@
+.row
+  .col-sm-4(style='height: 50rem;')
+    .place-content
+      .place-content-copy
+
+        %h3
+          Доктор Онлайн
+        %p.location
+          Проконсультируйтесь у врача
+        %p.summary
+          Текст о возможности онлайн консультации на сайте, около 30 слов
+        = link_to doctor_online_path do
+          %i.fa.fa-long-arrow-right.fa-3x
+        .social-medis
+        %a.share.facebook(href="/")
+          %i.fa.fa-facebook
+        %a.share.twitter(href="/")
+          %i.fa.fa-google-plus
+  .col-sm-8
+    .place-image
+      .img

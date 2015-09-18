@@ -31,13 +31,12 @@
               %p(style="padding-left:5px;color:red;")
                 = notice
               %p(style="padding-left:5px;color:red;")
-                = alert
+                Сайт работает в тестовом режиме
             = yield
 
             = render "layouts/footer"
 
-          /= javascript_include_tag "bottom-min.js.erb", extname: false
-    /= javascript_include_tag "users.js"
+          = javascript_include_tag "costum.js"
     = yield :scripts
 
 

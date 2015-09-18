@@ -1,2 +1,22 @@
-%h1 Procedures#index
-%p Find me in app/views/procedures/index.html.haml
+.row
+  .icp-hero
+    .col-sm-12.icp-hero-two.procedures
+
+  - @service_categories.each do |category|
+    .col-sm-4
+      .profile-content.doctor
+        = link_to procedure_category_path(category[:slug]) do
+          .img{:style => "background-image: url(#{image_path "#{category.image_small_url}"})"}
+        .profile-content-copy
+          %p.category
+            наши услуги
+          = link_to procedure_category_path(category[:slug]) do
+            %h3.profile-name
+              = category.name
+          %p.profile-summary
+            Узнайте больше
+          = link_to procedure_category_path(category[:slug]) do
+            %i.fa.fa-long-arrow-right.fa-3x
+= render "layouts/doctor_online"
+.row
+  = render "layouts/instagram"

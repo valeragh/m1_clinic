@@ -16,7 +16,7 @@
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "О клинике", about_path
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "Услуги", servis_path
+          = link_to "Услуги", procedures_path
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "Цены", price_path
         %li.nav-logo.hidden-xs(style="margin-top: 20.8888888888889px; margin-bottom: 0px")
@@ -25,14 +25,14 @@
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "Новости", news_path
         %li.doctor(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-          = link_to "Доктор Online"
+          = link_to "Доктор Online", doctor_online_path
         %li(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
           = link_to "Контакты", contact_path
         - if signed_in?
           %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
             = link_to cabinet_path do
-              %i.fa.fa-comments 
-          
+              %i.fa.fa-comments
+
           %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
             = link_to destroy_user_session_path, :method => :delete do
               %i.fa.fa-sign-out
@@ -40,8 +40,7 @@
           %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
             = link_to new_user_registration_path do
               %i.fa.fa-user
-          
+
           %li.login(style="margin-top: 82.9411764705882px; margin-bottom: 78.3333333333333px;")
-            = link_to new_user_session_path do 
+            = link_to new_user_session_path do
               %i.fa.fa-sign-in
-              
