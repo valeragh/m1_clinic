@@ -5663,7 +5663,7 @@ h3 {
 }
 .forum-content {
   padding: 2rem;
-  background: #fff;
+  background: #00356c;
   height: 41rem;
   text-align: center;
 }
@@ -5761,14 +5761,14 @@ h3 {
     bottom: auto;
     left: auto;
     right: 100%;
-    top: 10%;
+    top: 24%;
     border: solid transparent;
     content: " ";
     height: 0;
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #f3f2ea;
+    border-right-color: #00356c;
     border-width: 20px;
     margin-top: -30px;
   }
@@ -5789,7 +5789,7 @@ h3 {
 .find-leodis,
 .leodis-content {
   padding: 2rem;
-  background: #fff;
+  background: #00356c;
   height: 27rem;
   text-align: center;
 }
@@ -6022,7 +6022,7 @@ h3 {
 }
 .place-content {
   height: 41rem;
-  background: white;
+  background: #00356c;
   padding: 2rem;
   text-align: center;
 }
@@ -6313,7 +6313,7 @@ h3 {
   color: white;
 }
 .footer-links a:hover {
-  color: white;
+  color: #1096e6;
 }
 .footer-logo {
   margin: auto;

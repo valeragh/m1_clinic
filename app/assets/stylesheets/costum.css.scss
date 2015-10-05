@@ -1,20 +1,20 @@
 .forum-image .img {
-  background-image: url(asset-path('home_admin_1mclinic.jpg'));
+  background-image: url(asset-path('1m_clinic_reception.jpg'));
 }
 .profile-content .img {
   background-image: url(asset-path('history_home.jpg'));
 }
 .place-image .img {
-  background-image: url(asset-path('doctor3.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_ipad.jpg'));
 }
 .profile-content.doctor .img {
-  background-image: url(asset-path('doctor1.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_home.jpg'));
 }
 .profile-content.admin .img {
-  background-image: url(asset-path('home_administrator_1mclinic.jpg'));
+  background-image: url(asset-path('1m_clinic_admin.jpg'));
 }
 .profile-content.lab .img {
-  background-image: url(asset-path('home_laboratory_1mclinic.jpg'));
+  background-image: url(asset-path('1m_clinic_laboratory.jpg'));
 }
 .profile-content-partners.partner3 .img {
   background-image: url(asset-path('logo_partners1.jpg'));
@@ -26,10 +26,10 @@
   background-image: url(asset-path('logo_partners.jpg'));
 }
 .lager-image .img {
-  background-image: url(asset-path('about_us_1mclinic.jpg'));
+  background-image: url(asset-path('m1_clinic_team.jpg'));
 }
 .owl-img.img {
-  background-image: url(asset-path('products.jpg'));
+  background-image: url(asset-path('1m_clinic_inventory.jpg'));
 }
 .profile-content.certificate .img {
   background-image: url(asset-path('certificate.jpg'));
@@ -58,11 +58,11 @@
   height: 50rem;
 }
 .icp-hero-two.admin {
-  background-image: url(asset-path('administration_5.jpg'));
+  background-image: url(asset-path('1m_clinic_admin_ipad_2.jpg'));
   height: 50rem;
 }
 .icp-hero-three.admin {
-  background-image: url(asset-path('administration_6.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_admin.jpg'));
   height: 25rem;
 }
 .icp-hero-four.admin {
@@ -90,15 +90,15 @@
   height: 50rem;
 }
 .icp-hero-two.doctor {
-  background-image: url(asset-path('doctor_4.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_ipad_2.jpg'));
   height: 50rem;
 }
 .icp-hero-three.doctor {
-  background-image: url(asset-path('doctor2.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_laboratory_3.jpg'));
   height: 25rem;
 }
 .icp-hero-four.doctor {
-  background-image: url(asset-path('doctor_5.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_laboratory_2_421X250.jpg'));
   height: 25rem;
 }
 .icp-hero-one.laboratory {
@@ -106,15 +106,15 @@
   height: 50rem;
 }
 .icp-hero-two.laboratory {
-  background-image: url(asset-path('laboratory_2.jpg'));
+  background-image: url(asset-path('1m_clinic_laboratory_527X500.jpg'));
   height: 50rem;
 }
 .icp-hero-three.laboratory {
-  background-image: url(asset-path('laboratory_3.jpg'));
+  background-image: url(asset-path('1m_clinic_laboratory_2_421X500.jpg'));
   height: 25rem;
 }
 .icp-hero-four.laboratory {
-  background-image: url(asset-path('doctor_5.jpg'));
+  background-image: url(asset-path('1m_clinic_doctor_laboratory_2_421X250.jpg'));
   height: 25rem;
 }
 .map-image .img {
@@ -169,4 +169,52 @@ a.certificate {
 .col-sm-4.cabinet{
   background-color: #00356c;
   color: white;
+}
+.forum-content{
+  color: white;
+}
+.forum-content a{
+  color: white;
+}
+.forum-content a:hover{
+  color: #1096e6;
+}
+.leodis-content{
+  color: white;
+}
+.leodis-content a{
+  color: white;
+}
+.leodis-content a:hover{
+  color: #1096e6;
+}
+.profile a:hover{
+  color: #1096e6;
+}
+.events-calendar a{
+  color: white;
+}
+.events-calendar, .calendar-content a:hover{
+  color: #1096e6;
+}
+.place-content{
+  color: white;
+}
+.place-content a{
+  color: white;
+}
+.place-content a:hover{
+  color: #1096e6;
+}
+a:hover{
+  color: #1096e6;
+}
+.navbar-default .navbar-nav > li > a:hover{
+  color: #1096e6;
+}
+.site-social-media a:hover{
+  color: #1096e6;
+}
+.find-leodis{
+  background: #fff;
 }

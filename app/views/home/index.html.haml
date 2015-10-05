@@ -33,12 +33,10 @@
               = post.created_at
             = link_to show_news(post[:slug]) do
               = post.title
-        
+
         .follow
-          %a(href="/")
+          = link_to news_path do
             %i.fa.fa-long-arrow-right.fa-3x
-            %span.follow-text
-              ПОДПИСЫВАЙТЕСЬ
   .col-sm-6.col-md-4(style="z-index: 1;")
     .calendar-content
       %header
@@ -71,7 +69,10 @@
             Текст о чудесном выздоровление клиента, около 20 слов
           = link_to history_path do
             %i.fa.fa-long-arrow-right.fa-3x
-  .col-sm-4(style='height: 50rem;')
+  .col-sm7.col-md-8
+    .place-image
+      .img
+  .col-sm-5.col-md-4(style='height: 50rem;')
     .place-content
       .place-content-copy
         %p.category
@@ -89,9 +90,7 @@
           %i.fa.fa-facebook
         %a.share.twitter(href="/")
           %i.fa.fa-google-plus
-  .col-sm-8
-    .place-image
-      .img
+
   .col-sm-4
     .profile-content.doctor
       = link_to doctors_path do
