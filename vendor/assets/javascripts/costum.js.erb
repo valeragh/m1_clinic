@@ -70,10 +70,10 @@ function flipLogoBack() {
 }
 function toggleLogoSrc() {
   var src = $logo.attr('src');
-  if (src === "/assets/1M_clinic_logo_light.png") {
-    $logo.attr({ src: "/assets/1M_clinic_logo.png"});
+  if (src === "<%= asset_path("1M_clinic_logo_light.jpg") %>") {
+    $logo.attr({ src: "<%= asset_path("1M_clinic_logo.jpg") %>"});
   } else {
-    $logo.attr({ src: "/assets/1M_clinic_logo_light.png" });
+    $logo.attr({ src: "<%= asset_path("1M_clinic_logo_light.jpg") %>" });
   }
 }
 
