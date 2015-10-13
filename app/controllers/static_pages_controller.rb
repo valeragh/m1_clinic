@@ -1,5 +1,11 @@
 class StaticPagesController < ApplicationController
   def about
+    @clinics = Clinic.all
+    @hash = Gmaps4rails.build_markers(@clinics) do |clinic, marker|
+      marker.lat clinic.latitude
+      marker.lng clinic.longitude
+      marker.infowindow clinic.description
+    end
   end
 
   def contact

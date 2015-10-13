@@ -136,7 +136,8 @@
   color: #fff
 }
 .col-sm-12.icp-hero-two.procedures{
-  background-image: url(asset-path('about_us_1mclinic.jpg'));
+  background-image: url(asset-path('m1_clinic_team_2.jpg'));
+
 }
 @media (min-width: 992px){
   .site-wrapper{
@@ -217,4 +218,58 @@ a:hover{
 }
 .find-leodis{
   background: #fff;
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+.place-content.red{
+  background: #FE0000;
+  color: white;
+}
+.place-content.red p.location, .place-content.red p.category{
+  color: #3F0000;
+}
+
+.place-content.red a:hover{
+  color: #3F0000;
+}
+.forum-header h2{
+  font-size: 1.8rem;
+}
+table.price{
+  width: 100%;
+}
+.price thead tr:nth-child(1){
+  background: #1096e6;
+  color: white;
+}
+th{
+  text-align: center;
+  width: 85%;
+}
+.ab{
+  height: 300px;
+}
+.blue{
+  background: #1096e6;
+  color: white;
+}
+span.red{
+  color: #FE0000;
 }

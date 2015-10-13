@@ -5,8 +5,8 @@
     .map-image
       %div(style='width: 100%;')
         #map(style='width: 100%; height: 500px;')
-  .col-sm-5.col-md-4(style='height: 500px;')
-    .forum-content
+  .col-sm-5.col-md-4
+    .forum-content(style='height: 46rem;')
       %header
         %h3
           Как нас найти
@@ -17,21 +17,23 @@
       %h3
         Адрес
       %p
-        г. Мариуполь, ул. Металлургов, дом 48б
-  .col-sm-4.ab
-    .about-content.middle
+        г. Мариуполь, ул. Металлургов, дом 84б
+  .col-sm-4.ab.blue
+    .about-content
       %h3
         Телефон
       %p
-        +38-050-777-77-77
+        +38-0629-48-20-49
         %br
-        +38-062-777-77-77
+        +38-066-995-95-96
+        %br
+        +38-097-598-99-88
   .col-sm-4.ab
     .about-content
       %h3
         Вопросы? Комментарии
       %p
-        =link_to "1m_clinic@mail.com", "/"
+        =link_to "1mensclinic@gmail.com", "/"
 
   = render "layouts/instagram"
 
@@ -42,4 +44,5 @@
       markers = handler.addMarkers(#{raw @hash.to_json});
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
+      handler.getMap().setZoom(16);
     });

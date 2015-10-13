@@ -1,2 +1,26 @@
-%h1 News#index
-%p Find me in app/views/news/index.html.haml
+.row
+  .col-sm-12
+    .forum-header
+      %h1
+        Новости клиники
+      %p
+        Вступительный текст о новостных материалах Первой Мужской Клиники
+
+  - @posts.each do |post|
+    .col-sm-4
+      .profile-content.doctor
+        = link_to show_news_path(post[:slug]) do
+          .img{:style => "background-image: url(#{image_path "#{post.image_url}"})"}
+        .profile-content-copy
+          %p.category
+            наши новости
+          = link_to show_news_path(post[:slug]) do
+            %h3.profile-name
+              = category.name
+          %p.profile-summary
+            Узнайте больше
+          = link_to show_news_path(post[:slug]) do
+            %i.fa.fa-long-arrow-right.fa-3x
+= render "layouts/doctor_online"
+.row
+  = render "layouts/instagram"
