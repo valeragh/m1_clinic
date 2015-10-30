@@ -1,6 +1,12 @@
 .row
-  .icp-hero
-    .col-sm-12.icp-hero-two.procedures_show{:style => "background-image: url(#{image_path "#{@service_category.image_url}"})"}
+  .col-sm-12.procedures_show{:style => "background-image: url(#{image_path "#{@service_category.image_url}"})"}
+
+  .col-sm-12
+    .forum-header
+      %h1
+        = @service_category.name
+      %p
+        Вступительный текст о услугах и процедурах Первой Мужской Клиники
 
   - @services.each do |service|
     .col-sm-4

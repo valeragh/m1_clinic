@@ -1,4 +1,4 @@
-.row(style="min-height:500px;")
+.row
   .col-sm-12
     .getintouch-header
       %h1
@@ -6,39 +6,39 @@
           Добрый день доктор
         - else
           Выбирете доктора
-  .col-sm-12
 
-    - if current_user.role == 'doctor'
-      - if @conversations.any?
-        - @conversations.each do |conversation|
-          .col-sm-12(style="padding-bottom:5px;")
-            .col-sm-4.text-center.cabinet
-              %h4
-                = conversation.sender.email
-            .col-sm-8
-              = link_to conversation_path(conversation[:id]), "data-cid" => conversation.id, class: "blue-button" do
 
-                %p(style="padding-left:5px;")
-                  = conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45)
-      - else
-        Вам не отправили не одного сообщения
+  - if current_user.role == 'doctor'
+    - if @conversations.any?
+      - @conversations.each do |conversation|
+        .col-sm-12(style="padding-bottom:5px;")
+          .col-sm-4.text-center.cabinet
+            %h4
+              = conversation.sender.email
+          .col-sm-8
+            = link_to conversation_path(conversation[:id]), "data-cid" => conversation.id, class: "blue-button" do
+
+              %p(style="padding-left:5px;")
+                = conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45)
     - else
-      .col-sm-12
-      - @users.each do |user|
-        .col-sm-4
-          .place-content
-            .place-content-copy
-              %p.category
-                Ваш
-              %h3
-                Доктор Онлайн
-              %p.location
-                = user.name
-              %p.summary
-                = user.description
-              = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
-                %i.fa.fa-long-arrow-right.fa-3x
-        .col-sm-8
-          .place-image
-            .img{:style => "background: url(#{image_path "#{user.image_url}"})"}
+      Вам не отправили не одного сообщения
+  - else
+
+    - @users.each do |user|
+      .col-sm-4(style="height:50rem;")
+        .place-content
+          .place-content-copy
+            %p.category
+              Ваш
+            %h3
+              Доктор Онлайн
+            %p.location
+              = user.name
+            %p.summary
+              = user.description
+            = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
+              %i.fa.fa-long-arrow-right.fa-3x
+      .col-sm-8
+        .place-image
+          .img{:style => "background: url(#{image_path "#{user.image_url}"})"}
 

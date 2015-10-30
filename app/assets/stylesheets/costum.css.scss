@@ -239,7 +239,7 @@ a:hover{
   height: 100%;
 }
 .place-content.red{
-  background: #FE0000;
+  background: #F60000;
   color: white;
 }
 .place-content.red p.location, .place-content.red p.category{
@@ -272,4 +272,8 @@ th{
 }
 span.red{
   color: #FE0000;
+}
+.col-sm-12.procedures_show{
+  background-size: cover;
+  height: 60rem;
 }

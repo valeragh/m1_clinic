@@ -32,8 +32,9 @@ Rails.application.routes.draw do
    match '/news', to: 'news#index', via: 'get'
    get '/news/:id', to: 'news#show', as: :show_news
    match '/procedures', to: 'procedures#index', via: 'get'
-  get '/procedures/:service_category_id', to: 'procedures#show', as: :procedure_category
-  get '/procedures/:service_category_id/service/:id', to: 'procedures#show_procedur', as: :procedure
+   get '/procedures/:service_category_id', to: 'procedures#show', as: :procedure_category
+   get '/procedures/:service_category_id/service/:id', to: 'procedures#show_procedur', as: :procedure
+   match '*path' => redirect('/'), via: :get
 
 
   # Example of regular route:

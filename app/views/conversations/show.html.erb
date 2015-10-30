@@ -1,11 +1,22 @@
 <%= javascript_include_tag "users.js" %>
 <div class="row">
   <div class="col-sm-12">
+    <div class="forum-header">
+      <h1>
+        Добрый день
+        <%= current_user.name %>
+      </h1>
+      <p>
+        Вступительный текст о личном кабинете Первой Мужской Клиники
+      </p>
+    </div>
+  </div>
+  <div class="col-sm-12">
     <div class="getintouch-header">
       <h1>Ваш кабинет</h1>
     </div>
     <div class="col-sm-4">
-      <%= image_tag "chat.jpg" %>
+      <%= image_tag "1m_clinic_doctor_ipad_chat.jpg" %>
     </div>
     <div class="col-sm-8">
       <div id="chatbox_1" class="chatbox">
@@ -37,7 +48,7 @@
       <h1>Загрузите изображение</h1>
     </div>
     <div class="col-sm-4">
-      <%= image_tag "download.jpg" %>
+      <%= image_tag "1m_clinic_download_chat.jpg" %>
     </div>
     <div class="col-sm-8">
       <%= form_for [@conversation, @certificate], html: { multipart: true } do |f| %>
