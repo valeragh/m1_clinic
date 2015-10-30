@@ -17,12 +17,19 @@
           %p.category
             = @service_category.name
           = link_to procedure_path(@service_category[:slug], service[:slug]) do
-            %h3.profile-name
+            %h3.service.profile-name
               = service.name
           %p.profile-summary
             Узнайте больше
           = link_to procedure_path(@service_category[:slug], service[:slug]) do
             %i.fa.fa-long-arrow-right.fa-3x
+  .col-sm-12
+    .forum-header
+      %p
+        = link_to procedures_path do
+          %i.fa.fa-long-arrow-left.fa-3x
+          %p
+            Все услуги
 = render "layouts/doctor_online"
 .row
   = render "layouts/instagram"

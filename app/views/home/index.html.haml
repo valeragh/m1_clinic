@@ -30,8 +30,8 @@
         - @posts.each do |post|
           .tweet
             .tweet-date
-              = post.created_at
-            = link_to show_news(post[:slug]) do
+              = l post.created_at, format: :long
+            = link_to show_news_path(post[:slug]) do
               = post.title
 
         .follow
@@ -73,7 +73,7 @@
     .place-image
       .img
   .col-sm-5.col-md-4(style='height: 50rem;')
-    .place-content.red
+    .place-content
       .place-content-copy
         %p.category
           Ваш
@@ -83,7 +83,7 @@
           Проконсультируйтесь у врача
         %p.summary
           Текст о возможности онлайн консультации на сайте, около 30 слов
-        = link_to "/" do
+        = link_to doctor_online_path do
           %i.fa.fa-long-arrow-right.fa-3x
         .social-medis
         %a.share.facebook(href="/")

@@ -15,12 +15,13 @@
           %p.category
             наши новости
           = link_to show_news_path(post[:slug]) do
-            %h3.profile-name
-              = category.name
+            %h3.service.profile-name
+              = post.name
           %p.profile-summary
             Узнайте больше
           = link_to show_news_path(post[:slug]) do
             %i.fa.fa-long-arrow-right.fa-3x
+
 = render "layouts/doctor_online"
 .row
   = render "layouts/instagram"

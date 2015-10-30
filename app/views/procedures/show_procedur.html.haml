@@ -1,6 +1,5 @@
 .row
-  .icp-hero
-    .col-sm-12.procedures_show{:style => "background-image: url(#{image_path "#{@service.image_url}"})"}
+  .col-sm-12.procedures_show{:style => "background-image: url(#{image_path "#{@service.image_url}"})"}
   .article.col-sm-8.col-sm-offset-2.article.col-md-6.col-md-offset-3
     %h1
       = @service.name
@@ -8,7 +7,11 @@
       = @service.price
     %p.article-content
       = @service.description
-= render "layouts/doctor_online"
+    = link_to procedure_category_path(@service_category[:slug]) do
+      %i.fa.fa-long-arrow-left.fa-3x
+      %p
+        Все услуги
+        = @service_category.name
 
 .row
   = render "layouts/instagram"
