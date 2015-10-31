@@ -3,8 +3,8 @@ class ServiceCategory < ActiveRecord::Base
   mount_uploader :image_url, ImageUploader
   mount_uploader :image_small_url, ImageUploader
 
-  validates :name, :image_url, :image_small_url, presence: true
-  
+  validates :name, :description, :image_url, :image_small_url, presence: true
+
   #include PgSearch
   #pg_search_scope :search, against: [:name],
   #associated_against: {services: [:name, :description, :description_two]}

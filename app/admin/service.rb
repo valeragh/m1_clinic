@@ -1,16 +1,20 @@
 ActiveAdmin.register Service do
 
-  permit_params :name, :image_url, :image_small_url, :price, :description, :service_category_id
+  permit_params :name, :tail, :image_url, :image_small_url, :price, :description, :service_category_id
   before_filter :find_resource, :only => [:show, :edit, :update, :destroy]
   actions :all
 
   filter :name, label: 'Название услуги'
+  filter :tail, label: 'Приоритет'
   filter :service_category, label: 'Категория', as: :select, collection: proc { ServiceCategory.find(Service.pluck(:service_category_id)).map { |m| [m.name, m.id] } }
   filter :created_at, label: 'Дата создания'
 
   form do |f|
     f.inputs 'Название услуги' do
       f.input :name
+    end
+    f.inputs 'Приоритет' do
+      f.input :tail
     end
     f.inputs 'Категория' do
       f.input :service_category_id, as: :select, collection: ServiceCategory.all.map { |m| [m.name, m.id] }
@@ -47,6 +51,7 @@ ActiveAdmin.register Service do
 
    sidebar "Детали", only: :show do
     attributes_table_for service do
+      row('Приоритет') { |b| service.tail}
       row("Стоимость"){|b| service.price}
       row("Категория"){|b| service.service_category.name}
     end

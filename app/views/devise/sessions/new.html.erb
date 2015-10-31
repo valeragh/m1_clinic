@@ -1,38 +1,27 @@
-<div class="row">
-  <div class="col-sm-12">
-    <div class="getintouch-header">
-      <h1>Ввход в систему</h1>
+<div class="container" style="min-height:750px;">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <h1 class="text-center login-title">Вход в систему</h1>
       <p>Укажите email и пароль</p>
-    </div>
-  </div>
-  <div class="col-sm-12">
-    <div class="contact">
+      <div class="account-wall">
+          <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+              alt="">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "form-signin"}) do |f| %>
+            <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+            <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Пароль" %>
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group">
-          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+            <% if devise_mapping.rememberable? -%>
+              <label class="checkbox pull-left">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </label>
+            <% end -%>
+            <%= f.submit "Ввойти", class: "btn btn-lg btn-primary btn-block" %>
+            <%= render "devise/shared/links" %>
+          <% end %>
         </div>
 
-        <div class="form-group">
-          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Пароль" %>
-        </div>
-
-        <% if devise_mapping.rememberable? -%>
-          <div class="form-group">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-        <% end -%>
-
-        <%= f.submit "Ввойти", class: "btn btn-primary" %>
-        
-      <% end %>
-    </div>
-  </div>
-  <div class="col-sm-12">
-
-    <div class="contact">
-      <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
 </div>

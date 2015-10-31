@@ -1,15 +1,22 @@
 ActiveAdmin.register ServiceCategory do
 
-  permit_params :name, :image_url, :image_small_url
+  permit_params :name, :tail, :image_url, :image_small_url
   before_filter :find_resource, :only => [:show, :edit, :update, :destroy]
   actions :all
 
   filter :name, label: 'Название категории'
+  filter :tail, label: 'Приоритет'
   filter :created_at, label: 'Дата создания'
 
   form do |f|
     f.inputs 'Название категории' do
       f.input :name
+    end
+    f.inputs 'Приоритет' do
+      f.input :tail
+    end
+    f.inputs 'Описание категории' do
+      f.input :description, as: :wysihtml5, commands: [ :bold, :italic, :underline, :ul, :ol, :outdent, :indent ], blocks: :basic
     end
     f.inputs 'Изображение большое 1684X893', :multipart => true do
       f.input :image_url
@@ -23,6 +30,7 @@ ActiveAdmin.register ServiceCategory do
   show title: :name do
     panel "Данные" do
       attributes_table_for service_category do
+        row('Приоритет') { |b| service_category.tail}
         row('Изображение маленькое') do
           image_tag service_category.image_small_url
         end

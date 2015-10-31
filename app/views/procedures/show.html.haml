@@ -6,7 +6,7 @@
       %h1
         = @service_category.name
       %p
-        Вступительный текст о услугах и процедурах Первой Мужской Клиники
+        = @service_category.description
 
   - @services.each do |service|
     .col-sm-4
