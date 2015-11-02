@@ -32,7 +32,7 @@
             .tweet-date
               = l post.created_at, format: :long
             = link_to show_news_path(post[:slug]) do
-              = post.title
+              = post.name
 
         .follow
           = link_to news_path do

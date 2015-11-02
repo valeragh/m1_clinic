@@ -2,10 +2,10 @@
   .article.col-sm-8.col-sm-offset-2.article.col-md-6.col-md-offset-3
     %h1
       = @post.name
-    %p.category
-      = @post.title
+    .category
+      = @post.title.html_safe
     %p.article-content
-      = @post.description
+      = @post.description.html_safe
     = link_to news_path do
       %i.fa.fa-long-arrow-left.fa-3x
       %p

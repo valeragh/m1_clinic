@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@posts = Post.first(3)
+  	@posts = Post.first(4)
   end
 
 end
