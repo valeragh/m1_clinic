@@ -62,6 +62,7 @@ ActiveAdmin.register ServiceCategory do
 
   index do
     column("Название"){|service_category| service_category.name}
+    column("Приоритет"){|service_category| service_category.tail}
     column "Дата создания", :created_at
     actions
   end

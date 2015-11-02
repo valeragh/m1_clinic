@@ -70,6 +70,7 @@ ActiveAdmin.register Service do
   index do
     column("Название"){|service| service.name}
     column("Категория"){|service| service.service_category.name}
+    column("Приоритет"){|service| service.tail}
     column("Стоимость"){|service| service.price}
     column "Дата создания", :created_at
     actions
