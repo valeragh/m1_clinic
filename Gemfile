@@ -47,6 +47,7 @@ gem "carrierwave"
 gem 'private_pub'
 gem 'thin'
 gem 'pg_search'
+gem 'bootstrap-modal-rails'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

@@ -11,10 +11,14 @@
  * file per style scope.
  *
  *= require_self
+ *= require bootstrap
  *= require font-awesome
  *= require main
  *= require costum
  *= require conversations
+ *= require animate
+ *= require bootstrap-modal-bs3patch
+ *= require bootstrap-modal
  */
 
 

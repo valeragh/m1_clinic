@@ -5,7 +5,7 @@ Rails.application.routes.draw do
              path: '',
              path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
 
-
+  resources :letters
   resources :conversations do
     resources :messages
     resources :certificates
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
    match '/procedures', to: 'procedures#index', via: 'get'
    get '/procedures/:service_category_id', to: 'procedures#show', as: :procedure_category
    get '/procedures/:service_category_id/service/:id', to: 'procedures#show_procedur', as: :procedure
+   get '/modal/:modal' => 'home#index', as: :modal
    match '*path' => redirect('/'), via: :get
 
 

@@ -9,4 +9,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w(bottom-min.js.erb)
 Rails.application.config.assets.precompile += %w(users.js)
 Rails.application.config.assets.precompile += %w(costum.js)
+Rails.application.config.assets.precompile += %w( bootstrap-modalmanager.js )
+Rails.application.config.assets.precompile += %w( bootstrap-modal.js )
 

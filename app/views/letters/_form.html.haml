@@ -1,0 +1,23 @@
+= form_for @letter do |f|
+  - if @letter.errors.any?
+    #error_explanation
+      %p
+        Исправте следующие ошибки перед отправкой:
+      %ul.error.text-left
+        - @letter.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.text_field :name, autofocus: true, type: 'text', placeholder: "Ваше имя", class: "form-control"
+
+  .form-group
+    = f.phone_field :phone, autofocus: true, type: 'text', placeholder: "Ваш номер телефона", class: "form-control"
+
+  .form-group
+    = f.email_field :email, autofocus: true, type: 'text', placeholder: "Email", class: "form-control"
+
+  .form-group
+    = f.text_area :description, type: 'text', placeholder: "Ваше сообщение", class: "form-control"
+
+  .actions
+    = f.submit "Отправить", class: "btn btn-primary"

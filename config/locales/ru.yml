@@ -512,6 +512,7 @@ ru:
       letter:
         name: "Имя"
         description: "Сообщение"
+        phone: "Телефон"
         created_at: "Создано"
         updated_at: "Обновлено"
       answer:
