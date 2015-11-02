@@ -6,10 +6,10 @@
     %p.category
       = @service.price
     %p.article-content
-      = @service.description
-    = link_to procedure_category_path(@service_category[:slug]) do
-      %i.fa.fa-long-arrow-left.fa-3x
-      %p
+      = @service.description.html_safe
+  .col-sm-12.title
+    %h1
+      = link_to procedure_category_path(@service_category[:slug]) do
         Все услуги
         = @service_category.name
 

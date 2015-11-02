@@ -364,3 +364,10 @@ input:focus::-webkit-input-placeholder {text-indent: 800px; transition: text-ind
 input:focus::-moz-placeholder          {text-indent: 800px; transition: text-indent 0.3s ease;}
 input:focus:-moz-placeholder           {text-indent: 800px; transition: text-indent 0.3s ease;}
 input:focus:-ms-input-placeholder      {text-indent: 800px; transition: text-indent 0.3s ease;}
+
+.title a{
+  color: #fff;
+}
+.title a:hover{
+  color: #00356c;
+}

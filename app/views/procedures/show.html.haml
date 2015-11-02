@@ -6,7 +6,7 @@
       %h1
         = @service_category.name
       %p
-        = @service_category.description
+        = @service_category.description.html_safe
 
   - @services.each do |service|
     .col-sm-4
@@ -23,13 +23,10 @@
             Узнайте больше
           = link_to procedure_path(@service_category[:slug], service[:slug]) do
             %i.fa.fa-long-arrow-right.fa-3x
-  .col-sm-12
-    .forum-header
-      %p
-        = link_to procedures_path do
-          %i.fa.fa-long-arrow-left.fa-3x
-          %p
-            Все услуги
+  .col-sm-12.title
+    %h1
+      = link_to procedures_path do
+        Все услуги
 = render "layouts/doctor_online"
 .row
   = render "layouts/instagram"
