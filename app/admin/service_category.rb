@@ -1,6 +1,6 @@
 ActiveAdmin.register ServiceCategory do
 
-  permit_params :name, :tail, :image_url, :image_small_url
+  permit_params :name, :tail, :image_url, :image_small_url, :description
   before_filter :find_resource, :only => [:show, :edit, :update, :destroy]
   actions :all
 
