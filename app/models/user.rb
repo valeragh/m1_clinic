@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :certificates
   mount_uploader :image_url, ImageUploader
 
+  validates :name, :email, presence: true
+  validates :password, :password_confirmation, presence: true, on: :create
+  validates :password, confirmation: true
+
   def role?(r)
     role.include? r.to_s
   end
