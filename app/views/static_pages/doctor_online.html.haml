@@ -3,21 +3,31 @@
     %h1
       Доктор онлайн
     %p.category
-      Слоган доктора клиники, около 20 слов
+      Сервис "Доктор Онлайн" разработан специально для Вас. Это возможность получить бесплатную консультацию докторов Первой Мужской Клиники, где бы Вы не находились
     %p.article-content
-      Полный рассказ о докторах в клинике, около 250 слов
-      %br
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-      %br
-      %br
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      %br
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+      Для получения доступа к сервису "Доктор Онлайн", Вам нужно пройти быструю
+      = link_to "регистрацию", new_user_registration_path, class: "text"
+      на нашем сайте, если Вы еще не зарегистрировались
       %br
       %br
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      После регистрации, Вы можите войти в
+      = link_to "личный кабинет", cabinet_path, class: "text"
+      где реализована возможность задать вопрос врачу Первой Мужской Клиники. Общение происходит в виде чата, как только доктор увидет Ваш вопрос и напишет Вас ответ, он появиться в Вашем личном кабинете и придет Вам на электронную почту, которую Вы указываете во время регистрации.
+      %br
+      %br
+      Так же в
+      = link_to "личном кабинете", cabinet_path, class: "text"
+      , Вы можите загрузить фотографию или любой графический файл, что бы показать врачу. Это возможность позволяет более полно ознакомиьтся с Вашим вопросом и дать более точные рекомендации.
+      %br
+      %br
+      Если у Вас есть вопросы по поводу работы сервиса "Доктор Онлайн"
+      =link_to "напишите нам", letters_path, class: "text"
+      Наши администраторы с радостью на них ответят
+      %br
+      %br
+
     = link_to cabinet_path do
       %i.fa.fa-long-arrow-right.fa-3x
       %p
-        Личный кабинет
+        Перейти в Личный кабинет
   = render "layouts/instagram"
