@@ -15,14 +15,18 @@
   .col-sm-4.ab
     .about-content
       %h3
-        Адрес
-      %p
-        г. Мариуполь, ул. Металлургов, дом 84б
+        Наш адрес
+      %p.contact
+        г. Мариуполь
+        %br
+        пр. Металлургов
+        %br
+        дом 84б
   .col-sm-4.ab.blue
     .about-content
       %h3
-        Телефон
-      %p
+        Наши контакты
+      %p.contact
         +38-0629-48-20-49
         %br
         +38-066-995-95-96
@@ -31,8 +35,8 @@
   .col-sm-4.ab
     .about-content
       %h3
-        Вопросы? Комментарии
-      %p
+        У Вас есть вопрос?
+      %p.contact
         =link_to "Напишите нам", letters_path
 
   = render "layouts/instagram"

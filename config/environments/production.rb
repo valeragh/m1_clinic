@@ -82,7 +82,7 @@ Rails.application.configure do
    :address              => "smtp.gmail.com",
    :port                 => 587,
    :domain => "1m-clinic.com.ua",
-   :user_name            => Rails.application.secrets.gmail_name,
+   :user_name            => Rails.application.secrets.gmail_username,
    :password             => Rails.application.secrets.gmail_password,
    :authentication       => "plain",
    :enable_starttls_auto => true
