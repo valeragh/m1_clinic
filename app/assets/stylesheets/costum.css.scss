@@ -417,3 +417,13 @@ a.text:hover{
 .error_explanation{
   color: #E80000;
 }
+.btn-white{
+  color: #00356c;
+  background-color: white;
+  border-color: #00356c;
+}
+.btn-white:hover, .btn-white:focus, .btn-white:active{
+  color: #ffffff;
+  background-color: #00356c;
+  border-color: rgba(0, 0, 0, 0);
+}

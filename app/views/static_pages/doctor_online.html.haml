@@ -1,3 +1,4 @@
+- meta :title => "1m-clinic.com.ua Первая Мужская Клиника, Лечение простатита, уретритов, восполительных процессов, Доктор Онлайн", :description => "1m-clinic.com.ua диагностика и лечение сложных случаев простотитов, уретритов, воспалительных процессов, инфекции, передаваемые половым путем, мужское бесплодие, эректильная дисфункция и другие сексуальные дисфункции. Доктор Онлайн Первой Мужской Клиники"
 .row
   .article.col-sm-8.col-sm-offset-2.article.col-md-6.col-md-offset-3
     %h1
@@ -26,8 +27,8 @@
       %br
       %br
 
-    = link_to cabinet_path do
-      %i.fa.fa-long-arrow-right.fa-3x
-      %p
-        Перейти в Личный кабинет
+    = link_to cabinet_path, class: "btn btn-primary btn-block" do
+      Личный кабинет
+    = link_to new_user_registration_path, class: "btn btn-white btn-block" do
+      Регистрация
   = render "layouts/instagram"
