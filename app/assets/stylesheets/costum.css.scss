@@ -25,7 +25,7 @@
 .profile-content-partners.partner1 .img {
   background-image: url(asset-path('logo_partners.jpg'));
 }
-.lager-image .img {
+.img.forum.comanda {
   background-image: url(asset-path('m1_clinic_team.jpg'));
 }
 .owl-img.img {
@@ -273,7 +273,7 @@ th{
 span.red{
   color: #FE0000;
 }
-.col-sm-12.procedures_show{
+.procedures_show{
   background-size: cover;
   height: 60rem;
 }
@@ -426,4 +426,10 @@ a.text:hover{
   color: #ffffff;
   background-color: #00356c;
   border-color: rgba(0, 0, 0, 0);
+}
+.instagram-photo.intro{
+  padding-top: 4rem;
+}
+.forum-content.map:after{
+  content: none;
 }

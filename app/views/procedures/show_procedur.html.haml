@@ -1,6 +1,7 @@
 - meta :title => "1m-clinic.com.ua Первая Мужская Клиника, Лечение простатита, уретритов, восполительных процессов, описание услуги", :description => "1m-clinic.com.ua диагностика и лечение сложных случаев простотитов, уретритов, воспалительных процессов, инфекции, передаваемые половым путем, мужское бесплодие, эректильная дисфункция и другие сексуальные дисфункции. Описание услуг и процедур Первой Мужской Клиники"
 .row
-  .col-sm-12.procedures_show{:style => "background-image: url(#{image_path "#{@service.image_url}"})"}
+  .col-xs-12.col-sm-12
+    = image_tag "#{@service.image_url}", style: "width: 100%;"
   .article.col-sm-8.col-sm-offset-2.article.col-md-6.col-md-offset-3
     %h1
       = @service.name
