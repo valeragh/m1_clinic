@@ -34,6 +34,7 @@
           = javascript_include_tag "costum.js"
     = javascript_include_tag 'bootstrap-modalmanager'
     = javascript_include_tag 'bootstrap-modal'
+    = render 'layouts/google_analytics'
     = render "layouts/script_letter" if params[:modal].present?
     = yield :scripts
 
