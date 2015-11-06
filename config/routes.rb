@@ -31,6 +31,8 @@ Rails.application.routes.draw do
    get '/procedures/:service_category_id', to: 'procedures#show', as: :procedure_category
    get '/procedures/:service_category_id/service/:id', to: 'procedures#show_procedur', as: :procedure
    get '/modal/:modal' => 'home#index', as: :modal
+   get 'sitemap' => 'home#sitemap'
+   get '/robots.txt' => 'static_pages#robots'
    match '*path' => redirect('/'), via: :get
 
 

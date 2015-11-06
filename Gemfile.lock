@@ -126,6 +126,7 @@ GEM
     dragonfly (0.9.15)
       multi_json (~> 1.0)
       rack
+    dynamic_sitemaps (2.0.0)
     em-http-request (1.1.2)
       addressable (>= 2.3.4)
       cookiejar
@@ -403,6 +404,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise
+  dynamic_sitemaps
   execjs
   factory_girl_rails (~> 4.0)
   font-awesome-rails (= 4.1.0.0)

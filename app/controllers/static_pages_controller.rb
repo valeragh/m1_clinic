@@ -20,14 +20,6 @@ class StaticPagesController < ApplicationController
   def price
   end
 
-  def servis
-  end
-
-  def news
-  end
-
-  def certificate
-  end
 
   def doctors
   end
@@ -41,6 +33,9 @@ class StaticPagesController < ApplicationController
   def administration
   end
 
-  def partners
+  def robots
+    robots = File.read(Rails.root + "config/robots.#{Rails.env}.txt")
+    render :text => robots, :layout => false, :content_type => "text/plain"
   end
+
 end
