@@ -10,7 +10,7 @@
       - else
         %h1
           Добрый день
-          current_user.name
+          = current_user.name
         %p
           Выбирете доктора
 
@@ -34,7 +34,10 @@
   - else
 
     - @users.each do |user|
-      .col-sm-4(style="height:50rem;")
+      .col-sm7.col-md-8
+        .place-image
+          .img{:style => "background: url(#{image_path "#{user.image_url}"})"}
+      .col-sm-5.col-md-4(style='height: 50rem;')
         .place-content
           .place-content-copy
             %p.category
@@ -44,10 +47,8 @@
             %p.location
               = user.name
             %p.summary
-              = user.description
+              = user.description.html_safe
             = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
               %i.fa.fa-long-arrow-right.fa-3x
-      .col-sm-8
-        .place-image
-          .img{:style => "background: url(#{image_path "#{user.image_url}"})"}
+
 
