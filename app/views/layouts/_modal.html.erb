@@ -1,8 +1,20 @@
-<div id="static" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
-  <div class="modal-body">
-    <p>Письмо удачно создано, наши администраторы свяжутся с Вами в ближайшее рабочее время</p>
+<% if params[:modal] == 'letter' %>
+  <div id="static" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
+    <div class="modal-body">
+      <p>Письмо удачно создано, наши администраторы свяжутся с Вами в ближайшее рабочее время</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" data-dismiss="modal" class="btn btn-primary">Продолжить</button>
+    </div>
   </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn btn-primary">Продолжить</button>
+<% elsif params[:modal] == 'user' %>
+  <div id="static_user" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
+    <div class="modal-body">
+      <p>Вы зарегистрировались на сайте Первой Мужской Клиники</p>
+    </div>
+    <div class="modal-footer">
+      <%= link_to "Личный кабинет", cabinet_path, type: "button", class: "btn btn-primary" %>
+      <button type="button" data-dismiss="modal" class="btn btn-white">Продолжить</button>
+    </div>
   </div>
-</div>
+<% end %>
