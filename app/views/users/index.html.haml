@@ -33,23 +33,23 @@
       Вам не отправили не одного сообщения
   - else
 
-    - @users.each do |user|
-      .col-sm-7.col-md-8
-        .place-image
-          .img{:style => "background: url(#{image_path "#{user.image_url}"})"}
-      .col-sm-5.col-md-4
-        .place-content
-          .place-content-copy
-            %p.category
-              Ваш
-            %h3
-              Доктор Онлайн
-            %p.location
-              = user.name
-            %p.summary
-              = user.description.html_safe
-            = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
-              %i.fa.fa-long-arrow-right.fa-3x
+  - @users.each do |user|
+    .col-sm-7.col-md-8
+      .place-image
+        .img{:style => "background-image: url(#{image_path "#{user.image_url}"})"}
+    .col-sm-5.col-md-4
+      .place-content
+        .place-content-copy
+          %p.category
+            Ваш
+          %h3
+            Доктор Онлайн
+          %p.location
+            = user.name
+          %p.summary
+            = user.description.html_safe
+          = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
+            %i.fa.fa-long-arrow-right.fa-3x
 
 
 
