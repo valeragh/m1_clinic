@@ -8,81 +8,81 @@
         <%= current_user.name %>
       </h1>
       <p>
-        Вступительный текст о личном кабинете Первой Мужской Клиники
+        Сервис "Доктор Онлайн" Первой Мужской Клиники, раработан специально для Вас. вы можите задать вопрос врачу или загрузить графическое изображения
       </p>
     </div>
   </div>
   <div class="col-sm-12">
     <div class="getintouch-header">
-      <h1>Ваш кабинет</h1>
+      <h1>Задайте вопрос</h1>
     </div>
-    <div class="col-sm-4">
-      <%= image_tag "1m_clinic_doctor_ipad_chat.jpg" %>
-    </div>
-    <div class="col-sm-8">
-      <div id="chatbox_1" class="chatbox">
-        <div class="chatboxhead">
-          <div class="chatboxtitle">
-            <i class="fa fa-comments"></i>
+  </div>
+  <div class="col-sm-5 col-md-4">
+    <%= image_tag "1m_clinic_doctor_ipad_chat.jpg" %>
+  </div>
+  <div class="col-sm-7 col-md-8">
+    <div id="chatbox_1" class="chatbox">
+      <div class="chatboxhead">
+        <div class="chatboxtitle">
+          <i class="fa fa-comments"></i>
 
-            <h1><%= @reciever.name %> </h1>
-          </div>
+          <h1><%= @reciever.name %> </h1>
+        </div>
 
-        </div>
-        <div class="chatboxcontent">
-          <% if @messages.any? %>
-              <%= render @messages %>
-          <% end %>
-        </div>
-        <div class="chatboxinput">
-          <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
-              <%= f.text_area :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
-          <% end %>
-
-        </div>
-        <%= subscribe_to conversation_path(@conversation) %>
       </div>
+      <div class="chatboxcontent">
+        <% if @messages.any? %>
+            <%= render @messages %>
+        <% end %>
+      </div>
+      <div class="chatboxinput">
+        <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
+            <%= f.text_area :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
+        <% end %>
+
+      </div>
+      <%= subscribe_to conversation_path(@conversation) %>
     </div>
   </div>
   <div class="col-sm-12">
     <div class="getintouch-header">
       <h1>Загрузите изображение</h1>
     </div>
-    <div class="col-sm-4">
-      <%= image_tag "1m_clinic_download_chat.jpg" %>
-    </div>
-    <div class="col-sm-8">
-      <div class="file_upload">
-        <%= form_for [@conversation, @certificate], html: { multipart: true } do |f| %>
-          <%- if @certificate.errors.any? %>
-            <div id="error_explanation">
-              <p>
-                Исправте следующие ошибки перед отправкой:
-              </p>
-              <ul>
-                <%- @certificate.errors.full_messages.each do |msg| %>
-                  <li>
-                    <%= msg %>
-                  </li>
-                <% end %>
-              </ul>
-            </div>
-          <% end %>
-
-            <div class="input-group">
-              <span class="input-group-btn">
-                  <span class="btn btn-primary btn-file">
-                    Выбрать
-                      <%= f.text_field :image_url, type: "file", :multiple => true %>
-                  </span>
-              </span>
-              <%= f.text_field :image_url, class: "form-control", :readonly => true %>
-          </div>
-          <div class="cabinet-submit">
-            <%= f.submit "Загрузить", class: "btn btn-primary btn-block" %>
+  </div>
+  <div class="col-sm-5 col-md-4">
+    <%= image_tag "1m_clinic_download_chat.jpg" %>
+  </div>
+  <div class="col-sm-7 col-md-8">
+    <div class="file_upload">
+      <%= form_for [@conversation, @certificate], html: { multipart: true } do |f| %>
+        <%- if @certificate.errors.any? %>
+          <div id="error_explanation">
+            <p>
+              Исправте следующие ошибки перед отправкой:
+            </p>
+            <ul>
+              <%- @certificate.errors.full_messages.each do |msg| %>
+                <li>
+                  <%= msg %>
+                </li>
+              <% end %>
+            </ul>
           </div>
         <% end %>
-      </div>
+
+          <div class="input-group">
+            <span class="input-group-btn">
+                <span class="btn btn-primary btn-file">
+                  Выбрать
+                    <%= f.text_field :image_url, type: "file", :multiple => true %>
+                </span>
+            </span>
+            <%= f.text_field :image_url, class: "form-control", :readonly => true %>
+        </div>
+        <div class="cabinet-submit">
+          <%= f.submit "Загрузить", class: "btn btn-primary btn-block" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

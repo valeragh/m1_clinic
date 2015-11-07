@@ -249,6 +249,14 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -5672,7 +5680,7 @@ h3 {
 }
 @media (min-width: 992px) {
   .forum-content {
-    height: 40rem;
+    height: 44rem;
   }
 }
 @media (min-width: 1200px) {
@@ -5844,7 +5852,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 768px) {
@@ -6195,7 +6203,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .contact {
-    width: 60%;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
