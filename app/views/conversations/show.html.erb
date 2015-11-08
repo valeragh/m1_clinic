@@ -1,5 +1,4 @@
 <% meta :title => "1m-clinic.com.ua Первая Мужская Клиника, Лечение простатита, уретритов, восполительных процессов, Личный кабинет", :description => "1m-clinic.com.ua диагностика и лечение сложных случаев простотитов, уретритов, воспалительных процессов, инфекции, передаваемые половым путем, мужское бесплодие, эректильная дисфункция и другие сексуальные дисфункции. Личный Кабинет пользователя Первой Мужской Клиники" %>
-<%= javascript_include_tag "users.js" %>
 <div class="row">
   <div class="col-sm-12">
     <div class="forum-header">
@@ -21,7 +20,7 @@
     <%= image_tag "1m_clinic_doctor_ipad_chat.jpg" %>
   </div>
   <div class="col-sm-7 col-md-8">
-    <div id="chatbox_1" class="chatbox">
+    <div id="chatbox_<%= "#{@conversation.id}" %>" class="chatbox">
       <div class="chatboxhead">
         <div class="chatboxtitle">
           <i class="fa fa-comments"></i>
@@ -32,7 +31,7 @@
       </div>
       <div class="chatboxcontent">
         <% if @messages.any? %>
-            <%= render @messages %>
+          <%= render @messages %>
         <% end %>
       </div>
       <div class="chatboxinput">

@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-filestyle.min
 //= require underscore
 //= require gmaps/google
 //= require private_pub
 //= require chat
-//= require bootstrap-filestyle.min
 //= require_tree .
 
