@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :conversations, :foreign_key => :sender_id
+  has_many :conversations, :foreign_key => :sender_id, :dependent => :destroy
   has_many :certificates
   mount_uploader :image_url, ImageUploader
 

@@ -1,5 +1,6 @@
 ActiveAdmin.register User do
 
+
   permit_params :name, :description, :image_url, :email, :password, :password_confirmation, :role
 
   index do
@@ -22,7 +23,7 @@ ActiveAdmin.register User do
     f.inputs 'Резюме доктора' do
       f.input :description, as: :wysihtml5, commands: [ :bold, :italic, :underline, :ul, :ol, :outdent, :indent ], blocks: :basic
     end
-    f.inputs 'Изображение маленькое 324X268', :multipart => true do
+    f.inputs 'Изображение маленькое 1732X976', :multipart => true do
       f.input :image_url
     end
     f.inputs 'Роль' do
@@ -65,6 +66,16 @@ ActiveAdmin.register User do
       column("Сессии") do |conversation|
         link_to conversation.recipient.name, [ :admin, conversation ]
       end
+    end
+  end
+
+  controller do
+    def update
+      if params[:user][:password].blank?
+        params[:user].delete("password")
+        params[:user].delete("password_confirmation")
+      end
+      super
     end
   end
 

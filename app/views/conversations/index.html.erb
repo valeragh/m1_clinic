@@ -70,17 +70,11 @@
           </div>
         <% end %>
 
-          <div class="input-group">
-            <span class="input-group-btn">
-                <span class="btn btn-primary btn-file">
-                  Выбрать
-                    <%= f.text_field :image_url, type: "file", :multiple => true %>
-                </span>
-            </span>
-            <%= f.text_field :image_url, class: "form-control", :readonly => true %>
-        </div>
+          <%= f.file_field :image_url, :multipart => true %>
         <div class="cabinet-submit">
-          <%= f.submit "Загрузить", class: "btn btn-primary btn-block" %>
+          <div class="actions">
+            <%= f.submit "Загрузить", class: "btn btn-primary btn-block" %>
+          </div>
         </div>
       <% end %>
     </div>
@@ -96,7 +90,7 @@
           <p>Вы можите открыть изображение или удалить его</p>
           <p>
             <%= link_to "Открыть", conversation_certificate_path(@conversation, certificate), class: "btn btn-primary" %>
-            <%= link_to "Удалить", conversation_certificate_path(@conversation, certificate), class: "btn btn-danger" %>
+            <%= link_to "Удалить", conversation_certificate_path(@conversation, certificate), method: :delete, data: { confirm: 'Вы уверены, что хотите удалить этот файл?' }, class: "btn btn-danger" %>
           </p>
         </div>
       </div>
@@ -108,26 +102,6 @@
 </div>
 <%- content_for :scripts do %>
   <script>
-    $(document).on('change', '.btn-file :file', function() {
-      var input = $(this),
-          numFiles = input.get(0).files ? input.get(0).files.length : 1,
-          label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-      input.trigger('fileselect', [numFiles, label]);
-    });
-
-    $(document).ready( function() {
-        $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-
-            var input = $(this).parents('.input-group').find(':text'),
-                log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-            if( input.length ) {
-                input.val(log);
-            } else {
-                if( log ) alert(log);
-            }
-
-        });
-    });
+    $(":file").filestyle({buttonText: "Выбрать файл"});
   </script>
 <% end %>

@@ -24,6 +24,8 @@
         = render "layouts/header"
         .site-wrapper(id="site-wrapper")
           .container-fluid(id="containing-wrapper")
+            %p.error
+              = notice
             %p
               = alert
             = render "layouts/modal"

@@ -16,15 +16,24 @@ class CertificatesController < ApplicationController
         format.html { redirect_to conversation_certificate_path(@conversation, @certificate), notice: 'Изображение загружено' }
         format.json { render action: 'show', status: :created, location: @certificate }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to conversation_path(@conversation), notice: 'Ошибка при загрузке изображения, выберете файл формата jpg, jpeg, gif, png' }
         format.json { render json: @certificate.errors, status: :unprocessable_entity }
       end
     end
   end
 
+  def destroy
+    @certificate.destroy
+    respond_to do |format|
+      format.html { redirect_to conversation_path(@conversation), notice: 'Изображение удалено' }
+      format.json { head :no_content }
+    end
+  end
+
   private
     def certificate_params
-      params.require(:certificate).permit(:image_url, :user_id, :conversation_id)
+      #params.require(:certificate).permit(:image_url, :user_id, :conversation_id)
+      params.fetch(:certificate, {}).permit(:image_url, :user_id, :conversation_id)
     end
 
     def load_conversation

@@ -16,5 +16,6 @@
 //= require gmaps/google
 //= require private_pub
 //= require chat
+//= require bootstrap-filestyle.min
 //= require_tree .
 

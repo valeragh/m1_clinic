@@ -431,3 +431,12 @@ a.text:hover{
 .forum-content.map:after{
   content: none;
 }
+.btn.btn-default{
+  color: #ffffff;
+  background-color: #00356c;
+  border-color: rgba(0, 0, 0, 0);
+}
+p.error{
+  color: red;
+  margin: 10px 0 0 10px;
+}
