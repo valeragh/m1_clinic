@@ -85,7 +85,7 @@
       <div class="thumbnail">
         <%= image_tag "#{certificate.image_url.thumb.url}" %>
         <div class="caption text-center">
-          <h3>Изображение</h3>
+          <h3><%= l certificate.created_at, format: :long %></h3>
           <p>Вы можите открыть изображение или удалить его</p>
           <p>
             <%= link_to "Открыть", conversation_certificate_path(@conversation, certificate), class: "btn btn-primary btn-block" %>

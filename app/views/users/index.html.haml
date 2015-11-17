@@ -1,55 +1,59 @@
 - meta :title => "1m-clinic.com.ua Первая Мужская Клиника, Лечение простатита, уретритов, восполительных процессов, Выбор доктора онлайн", :description => "1m-clinic.com.ua диагностика и лечение сложных случаев простотитов, уретритов, воспалительных процессов, инфекции, передаваемые половым путем, мужское бесплодие, эректильная дисфункция и другие сексуальные дисфункции. Выбор доктора онлайн Первой Мужской Клиники"
 .row(style="min-height: 650px;")
-  .col-sm-12
-    .getintouch-header
-      - if current_user.role == 'doctor'
+  - if current_user.role == 'doctor'
+    .col-sm-12
+      .getintouch-header
         %h1
           Добрый день доктор
         %p
           Выберите пользователя
-      - else
+
+    - if @conversations.any?
+      - @conversations.each do |conversation|
+        .col-sm-6.col-md-4
+          = link_to conversation_path(conversation[:id]), "data-cid" => conversation.id, class: "blue-button" do
+            .thumbnail
+              = image_tag "history.jpg"
+              .caption.text-center
+                %h2
+                  = conversation.messages.last.nil? ? "Нет даты" : (l conversation.messages.last.created_at, format: :long)
+                %h3
+                  = conversation.sender.name
+                %p
+                  = conversation.sender.email
+                %p.blue
+                  = conversation.messages.last.nil? ? "Нет сообщений" : truncate(conversation.messages.last.body, length: 45)
+      = paginate @conversations
+    - else
+      Вам не отправили не одного сообщения
+
+
+  - else
+    .col-sm-12
+      .getintouch-header
         %h1
           Добрый день
           = current_user.name
         %p
           Выбирете доктора
 
-
-  - if current_user.role == 'doctor'
-    - if @conversations.any?
-      - @conversations.each do |conversation|
-        .col-sm-12(style="padding-bottom:5px;")
-          .col-sm-4.text-center.cabinet
-            %h4
-              = conversation.sender.name
-              \/
-              = conversation.sender.email
-          .col-sm-8
-            = link_to conversation_path(conversation[:id]), "data-cid" => conversation.id, class: "blue-button" do
-
-              %p(style="padding-left:5px;")
-                = conversation.messages.last.nil? ? "Нет сообщений" : truncate(conversation.messages.last.body, length: 45)
-    - else
-      Вам не отправили не одного сообщения
-  - else
-
-  - @users.each do |user|
-    .col-sm-7.col-md-8
-      .place-image
-        .img{:style => "background-image: url(#{image_path "#{user.image_url}"})"}
-    .col-sm-5.col-md-4
-      .place-content
-        .place-content-copy
-          %p.category
-            Ваш
-          %h3
-            Доктор Онлайн
-          %p.location
-            = user.name
-          %p.summary
-            = user.description.html_safe
-          = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
-            %i.fa.fa-long-arrow-right.fa-3x
+    - @users.each do |user|
+      .col-sm-7.col-md-8
+        .place-image
+          .img{:style => "background-image: url(#{image_path "#{user.image_url}"})"}
+      .col-sm-5.col-md-4
+        .place-content
+          .place-content-copy
+            %p.category
+              Ваш
+            %h3
+              Доктор Онлайн
+            %p.location
+              = user.name
+            %p.summary
+              = user.description.html_safe
+            = link_to conversations_path(:sender_id => current_user[:id], :recipient_id => user[:id]), class: "blue-button" do
+              %i.fa.fa-long-arrow-right.fa-3x
 
 
 

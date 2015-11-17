@@ -416,6 +416,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   less-rails
   meta_request
   metamagic

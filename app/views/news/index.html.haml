@@ -22,6 +22,7 @@
             Узнайте больше
           = link_to show_news_path(post[:slug]) do
             %i.fa.fa-long-arrow-right.fa-3x
+= paginate @posts
 
 = render "layouts/doctor_online"
 .row

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     @users = User.where("role = 'doctor'")
     #@users = User.where.not("id = ?",current_user.id).order("created_at DESC")
-    @conversations = Conversation.involving(current_user).order("created_at DESC")
+    @conversations = Conversation.involving(current_user).order('updated_at DESC').page(params[:page]).per(15)
   end
 
   def show

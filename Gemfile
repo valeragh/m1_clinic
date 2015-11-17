@@ -50,6 +50,7 @@ gem 'pg_search'
 gem 'bootstrap-modal-rails'
 gem "dynamic_sitemaps"
 gem 'bootstrap-filestyle-rails'
+gem 'kaminari'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
