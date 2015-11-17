@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-  	@posts = Post.all.page(params[:page]).per(6)
+  	@posts = Post.all
   end
 
   def show
