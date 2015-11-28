@@ -51,6 +51,7 @@ gem 'bootstrap-modal-rails'
 gem "dynamic_sitemaps"
 gem 'bootstrap-filestyle-rails'
 gem 'kaminari'
+gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

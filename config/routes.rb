@@ -33,7 +33,8 @@ Rails.application.routes.draw do
    get '/modal/:modal' => 'home#index', as: :modal
    get 'sitemap' => 'home#sitemap'
    get '/robots.txt' => 'static_pages#robots'
-   match '*path' => redirect('/'), via: :get
+   get "http://1m-clinic.com" => redirect("http://1m-clinic.com.ua")
+   match '*path' => redirect("http://1m-clinic.com.ua"), via: :get
 
 
   # Example of regular route:
