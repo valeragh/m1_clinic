@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ImageUploader < CarrierWave::Uploader::Base
+class ChatUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
@@ -8,7 +8,9 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   #storage :file
-  # storage :fog
+  storage :fog
+  include CarrierWave::MimeTypes
+  process :set_content_type
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -27,6 +29,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   #
+  # def scale(width, height)
+  #   # do something
+  # end
 
   # Create different versions of your uploaded files:
   version :thumb do

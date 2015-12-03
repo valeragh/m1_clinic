@@ -1,6 +1,9 @@
 Первая Мужская Клиника
 
-Добрый день <%= @user.conversation.sender.name %>, доктор <%= @user.conversation.recipient.name %> ответил на Ваш вопрос. Прочитать ответ Вы можите на сайте Первой Мужской Клиники, в Вашем кабинете [http://www.1m-clinic.com.ua/cabinet]
+Добрый день <%= @user.conversation.sender.name %>, доктор <%= @user.conversation.recipient.name %> ответил на Ваш вопрос.
+
+Ответ Вы можете прочитать в личном кабинете:
+<%= conversation_url(@user.conversation.id) %>
 
 Просмотрите полезные материалы от Первой Мужской Клиники:
 

@@ -20,6 +20,8 @@ class StaticPagesController < ApplicationController
   def price
   end
 
+  def privacy
+  end
 
   def doctors
   end

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
    match '/cabinet', to: 'users#index', via: 'get'
    match '/contact', to: 'static_pages#contact', via: 'get'
    match '/price', to: 'static_pages#price', via: 'get'
+   match '/privacy', to: 'static_pages#privacy', via: 'get'
    match '/doctors', to: 'static_pages#doctors', via: 'get'
    match '/laboratory', to: 'static_pages#laboratory', via: 'get'
    match '/administration', to: 'static_pages#administration', via: 'get'

@@ -39,11 +39,9 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'metamagic'
 gem 'cancancan'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-vkontakte'
-gem "rmagick"
+gem "rmagick", require: false
 gem "carrierwave"
+gem 'fog'
 gem 'private_pub'
 gem 'thin'
 gem 'pg_search'
@@ -56,11 +54,9 @@ gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem "factory_girl_rails", "~> 4.0"
-  gem "capybara"
-  gem "database_cleaner"
-  gem "selenium-webdriver"
-  gem 'teaspoon'
-  gem 'phantomjs'
+  gem 'pry-rails'
+  gem 'ffaker'
+  gem 'spring'
 end
 
 group :production do
