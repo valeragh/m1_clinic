@@ -40,4 +40,30 @@ class UserMailer < ActionMailer::Base
     mail to: message.conversation.recipient.email, subject: "Доктор #{message.conversation.recipient.name} Ваше письмо отправлено"
   end
 
+  def user_send_certificate_confirmation(certificate)
+    @user = certificate
+    attachments.inline['1M_clinic_logo_small.png'] = File.read("#{Rails.root}/app/assets/images/1M_clinic_logo_small.png")
+    attachments.inline['1m_clinic_doctor_ipad.jpg'] = File.read("#{Rails.root}/app/assets/images/1m_clinic_doctor_ipad.jpg")
+    mail to: certificate.user.email, subject: "Подтверждения загрузки изображения для доктора #{certificate.conversation.recipient.name} Первой Мужской Клиники"
+  end
+
+  def doctor_send_certificate_confirmation(certificate)
+    @user = certificate
+    attachments.inline['1M_clinic_logo_small.png'] = File.read("#{Rails.root}/app/assets/images/1M_clinic_logo_small.png")
+    mail to: certificate.conversation.recipient.email, subject: "У Вас новое изображение доктор #{certificate.conversation.recipient.name}"
+  end
+
+  def user_answer_certificate_confirmation(certificate)
+    @user = certificate
+    attachments.inline['1M_clinic_logo_small.png'] = File.read("#{Rails.root}/app/assets/images/1M_clinic_logo_small.png")
+    attachments.inline['1m_clinic_doctor_ipad_2.jpg'] = File.read("#{Rails.root}/app/assets/images/1m_clinic_doctor_ipad_2.jpg")
+    mail to: certificate.conversation.sender.email, subject: "Доктор #{certificate.conversation.recipient.name} Первой Мужской Клиники загрузил новое изображение"
+  end
+
+  def doctor_answer_certificate_confirmation(certificate)
+    @user = certificate
+    attachments.inline['1M_clinic_logo_small.png'] = File.read("#{Rails.root}/app/assets/images/1M_clinic_logo_small.png")
+    mail to: certificate.conversation.recipient.email, subject: "Доктор #{message.conversation.recipient.name} Ваше изображение отправлено"
+  end
+
 end

@@ -1,0 +1,10 @@
+Первая Мужская Клиника
+
+Доктор <%= @user.conversation.recipient.name %> Ваше изображение загружено для пользователя <%= @user.conversation.sender.name %>(<%= @user.conversation.sender.email %>).
+
+
+Вы можете перейти в личный кабинет, что бы продолжить общение с пользователем:
+<%= conversation_url(@user.conversation.id) %>
+
+
+

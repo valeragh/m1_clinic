@@ -13,6 +13,15 @@ class CertificatesController < ApplicationController
     #@certificate.conversation_id = @conversation.id
     respond_to do |format|
       if @certificate.save
+        if current_user.role != 'doctor'
+          UserMailer.user_send_certificate_confirmation(@certificate).deliver
+          UserMailer.doctor_send_certificate_confirmation(@certificate).deliver
+          #AdminMailer.admin_conversation_user_doctor(@certificate).deliver
+        else
+          UserMailer.user_answer_certificate_confirmation(@certificate).deliver
+          UserMailer.doctor_answer_certificate_confirmation(@certificate).deliver
+          #AdminMailer.admin_conversation_doctor_user(@certificate).deliver
+        end
         format.html { redirect_to conversation_certificate_path(@conversation, @certificate), notice: 'Изображение загружено' }
         format.json { render action: 'show', status: :created, location: @certificate }
       else
