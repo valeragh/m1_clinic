@@ -12,9 +12,9 @@ class LettersController < ApplicationController
 
     respond_to do |format|
       if @letter.save
-        UserMailer.letter_confirmation(@letter).deliver
-        UserMailer.letter_admin_confirmation(@letter).deliver
-        AdminMailer.letter_admin_confirmation(@letter).deliver
+        UserMailer.delay.letter_confirmation(@letter)
+        UserMailer.delay.letter_admin_confirmation(@letter)
+        AdminMailer.delay.letter_admin_confirmation(@letter)
         format.html { redirect_to modal_path(modal: 'letter') }
         format.json { render action: 'show', status: :created, location: @letter }
       else

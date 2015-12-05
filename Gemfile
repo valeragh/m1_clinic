@@ -50,6 +50,7 @@ gem "dynamic_sitemaps"
 gem 'bootstrap-filestyle-rails'
 gem 'kaminari'
 gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+gem 'sidekiq'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
@@ -68,7 +69,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development do
-  gem 'spring'
+  #gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
