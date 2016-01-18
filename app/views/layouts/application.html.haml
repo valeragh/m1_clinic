@@ -39,5 +39,6 @@
     = render 'layouts/google_analytics'
     = render "layouts/script_#{params[:modal]}" if params[:modal].present?
     = yield :scripts
+    = render 'layouts/remarketing'
 
 
