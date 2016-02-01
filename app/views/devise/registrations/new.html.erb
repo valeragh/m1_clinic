@@ -8,15 +8,16 @@
         <%= image_tag "add_user_icon.png", class: "profile-img" %>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form-signin"}) do |f| %>
+          <%= devise_error_messages! %>
 
           <%= f.text_field :name, class: "form-control", placeholder: "Имя/Логин" %>
-          <%= errors_for @user, :name %>
+
           <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
-          <%= errors_for @user, :email %>
+
           <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Пароль минимум 8 символов" %>
-          <%= errors_for @user, :password %>
+
           <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите пароль" %>
-          <%= errors_for @user, :password_confirmation %>
+
           <%= f.submit "Регистрация", class: "btn btn-lg btn-primary btn-block" %>
           <%= render "devise/shared/links" %>
         <% end %>
