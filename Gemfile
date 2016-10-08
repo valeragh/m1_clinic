@@ -41,6 +41,7 @@ gem 'metamagic'
 gem 'cancancan'
 gem "rmagick", require: false
 gem "carrierwave"
+gem 'mini_magick'
 gem 'fog'
 gem 'private_pub'
 gem 'thin'

@@ -5,6 +5,10 @@ class StaticPagesController < ApplicationController
       marker.lat clinic.latitude
       marker.lng clinic.longitude
       marker.infowindow clinic.description
+      marker.picture({
+        "url" => view_context.image_url('map-marker_150x150.png'),
+        "width" => 150,
+        "height" => 150})
     end
   end
 
@@ -14,6 +18,10 @@ class StaticPagesController < ApplicationController
       marker.lat clinic.latitude
       marker.lng clinic.longitude
       marker.infowindow clinic.description
+      marker.picture({
+        "url" => view_context.image_url('map-marker_150x150.png'),
+        "width" => 150,
+        "height" => 150})
     end
   end
 
@@ -35,9 +43,18 @@ class StaticPagesController < ApplicationController
   def administration
   end
 
+  def sitemap
+    path = Rails.root.join("public", "sitemaps", "sitemap.xml")
+    if File.exists?(path)
+      render xml: open(path).read
+    else
+      render text: "Sitemap not found.", status: :not_found
+    end
+  end
+
   def robots
-    robots = File.read(Rails.root + "config/robots.#{Rails.env}.txt")
-    render :text => robots, :layout => false, :content_type => "text/plain"
+    respond_to :text
+    expires_in 6.hours, public: true
   end
 
 end

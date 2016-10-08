@@ -336,6 +336,7 @@ GEM
       rails (>= 3.0.0)
     method_source (0.8.2)
     mime-types (2.99)
+    mini_magick (4.2.4)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
@@ -521,6 +522,7 @@ DEPENDENCIES
   mailgun-ruby (~> 1.0.3)
   meta_request
   metamagic
+  mini_magick
   nokogiri
   pg
   pg_search

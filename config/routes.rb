@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/robots.:format' => 'static_pages#robots'
+  get 'sitemap.xml' => 'static_pages#sitemap', format: :xml, as: :sitemap, controller: 'static_pages', action: 'sitemap'
   devise_for :users,
              controllers: { registrations: 'registrations', sessions: 'sessions' },
              path: '',
@@ -32,9 +34,6 @@ Rails.application.routes.draw do
    get '/procedures/:service_category_id', to: 'procedures#show', as: :procedure_category
    get '/procedures/:service_category_id/service/:id', to: 'procedures#show_procedur', as: :procedure
    get '/modal/:modal' => 'home#index', as: :modal
-   get 'sitemap' => 'home#sitemap'
-   get '/robots.txt' => 'static_pages#robots'
-   get "http://1m-clinic.com" => redirect("http://1m-clinic.com.ua")
    match '*path' => redirect("http://1m-clinic.com.ua"), via: :get
 
 
